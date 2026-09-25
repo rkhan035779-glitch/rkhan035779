@@ -3,69 +3,586 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>RR Aluminium & Glass Work</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#101b25;color:#fff}
-.hero{max-width:980px;margin:0 auto;padding:18px 16px 28px}
-.brand{background:#fff;color:#16202b;border-radius:0 0 18px 18px;padding:20px 18px;font-size:clamp(22px,4vw,38px);font-weight:800;text-align:center}.brand span{color:#1674e8}
-.slider{position:relative;margin-top:18px;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 16px 45px rgba(0,0,0,.28)}
-.slide{display:none;position:relative}.slide.active{display:block}
-.photo{position:relative;background:#111}.slide img{width:100%;height:430px;object-fit:cover;display:block}
-.overlay-brand{position:absolute;left:0;right:0;top:0;padding:13px 16px;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,0));font-size:clamp(18px,3.5vw,28px);font-weight:800;letter-spacing:.3px;text-shadow:0 2px 5px #000;z-index:2}.overlay-brand span{color:#ffd21c}
-.info{padding:20px 20px 16px;background:#fff;color:#17212b}.info h2{margin:0 0 8px;font-size:clamp(21px,3.4vw,31px)}.info p{margin:0;color:#5e6873;font-size:16px;line-height:1.5}
-.actions{position:absolute;left:18px;right:18px;bottom:18px;display:flex;gap:14px;z-index:4}.actions a{flex:1;text-align:center;text-decoration:none;border-radius:16px;padding:16px 12px;font-weight:800;font-size:18px;box-shadow:0 6px 16px rgba(0,0,0,.28);border:2px solid rgba(255,255,255,.9)}.call{background:#1674e8;color:#fff}.whatsapp{background:#20c76a;color:#fff}.info{padding:20px 20px 16px;background:#fff;color:#17212b}.info h2{margin:0 0 8px;font-size:clamp(21px,3.4vw,31px)}.info p{margin:0;color:#5e6873;font-size:16px;line-height:1.5}
-.dots{display:flex;justify-content:center;gap:7px;padding:14px;background:#fff;flex-wrap:wrap}.dot{width:8px;height:8px;border-radius:50%;background:#b8c0c8;cursor:pointer}.dot.active{background:#1674e8;width:22px;border-radius:8px}
-.note{text-align:center;color:#b9c4ce;font-size:13px;padding-top:14px;line-height:1.5}
-@media(max-width:600px){.hero{padding:10px}.brand{padding:16px 14px}.slide img{height:300px}.info{padding:16px}.actions{left:12px;right:12px;bottom:12px;gap:10px}.actions a{font-size:15px;padding:14px 7px;border-radius:14px}.overlay-brand{padding:10px 12px}}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:#17212b;
+}
+
+.hero{
+  max-width:980px;
+  margin:0 auto;
+  padding:0 10px 30px;
+}
+
+.brand{
+  background:#fff;
+  color:#16202b;
+  border-radius:0 0 18px 18px;
+  padding:20px 18px;
+  font-size:clamp(22px,4vw,38px);
+  font-weight:800;
+  text-align:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.brand span{color:#1674e8}
+
+.slider{
+  position:relative;
+  margin-top:18px;
+  border-radius:24px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+
+.slide{
+  display:none;
+  position:relative;
+}
+
+.slide.active{display:block}
+
+.photo{
+  position:relative;
+  background:#fff;
+}
+
+.slide img{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  display:block;
+  cursor:zoom-in;
+}
+
+.overlay-brand{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  padding:13px 16px;
+  background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,0));
+  font-size:clamp(18px,3.5vw,28px);
+  font-weight:800;
+  letter-spacing:.3px;
+  text-shadow:0 2px 5px #000;
+  color:#fff;
+  z-index:2;
+}
+
+.overlay-brand span{color:#ffd21c}
+
+.info{
+  padding:20px 20px 16px;
+  background:#fff;
+  color:#17212b;
+}
+
+.info h2{
+  margin:0 0 8px;
+  font-size:clamp(21px,3.4vw,31px);
+}
+
+.info p{
+  margin:0;
+  color:#5e6873;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.actions{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  gap:14px;
+  z-index:4;
+}
+
+.actions a{
+  flex:1;
+  text-align:center;
+  text-decoration:none;
+  border-radius:16px;
+  padding:16px 12px;
+  font-weight:800;
+  font-size:18px;
+  box-shadow:0 6px 16px rgba(0,0,0,.28);
+  border:2px solid rgba(255,255,255,.9);
+}
+
+.call{
+  background:#1674e8;
+  color:#fff;
+}
+
+.whatsapp{
+  background:#20c76a;
+  color:#fff;
+}
+
+.dots{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  padding:14px;
+  background:#fff;
+  flex-wrap:wrap;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#b8c0c8;
+  cursor:pointer;
+}
+
+.dot.active{
+  background:#1674e8;
+  width:22px;
+  border-radius:8px;
+}
+
+.services{
+  text-align:center;
+  color:#16202b;
+  font-size:15px;
+  padding:18px 5px 8px;
+  line-height:1.8;
+}
+
+.contact{
+  text-align:center;
+  background:#fff;
+  padding:18px 10px;
+  border-top:1px solid #eee;
+}
+
+.contact h3{
+  margin:0 0 10px;
+  font-size:21px;
+}
+
+.contact p{
+  margin:7px 0;
+  color:#555;
+  font-size:15px;
+}
+
+.contact a{
+  color:#1674e8;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.footer{
+  text-align:center;
+  padding:15px 10px 5px;
+  color:#777;
+  font-size:13px;
+}
+
+/* PHOTO VIEWER */
+.viewer{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.viewer.show{
+  display:flex;
+}
+
+.viewer img{
+  max-width:94vw;
+  max-height:88vh;
+  object-fit:contain;
+  cursor:grab;
+  transform:scale(1);
+  transition:transform .15s ease;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+.closeViewer{
+  position:absolute;
+  top:15px;
+  right:18px;
+  width:44px;
+  height:44px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:#111;
+  font-size:30px;
+  line-height:44px;
+  cursor:pointer;
+  z-index:10001;
+}
+
+.zoomButtons{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+  z-index:10001;
+}
+
+.zoomButtons button{
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:#111;
+  font-size:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+@media(max-width:600px){
+  .hero{padding:0 8px 25px}
+
+  .brand{
+    padding:16px 14px;
+    font-size:23px;
+  }
+
+  .slide img{
+    height:300px;
+  }
+
+  .info{
+    padding:16px;
+  }
+
+  .actions{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    gap:10px;
+  }
+
+  .actions a{
+    font-size:15px;
+    padding:14px 7px;
+    border-radius:14px;
+  }
+
+  .overlay-brand{
+    padding:10px 12px;
+  }
+
+  .services{
+    font-size:14px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <main class="hero">
-  <div class="brand">RR <span>ALUMINIUM &amp; GLASS WORK</span></div>
-  <section class="slider">
-    <div id="slides"></div>
-    <div class="dots" id="dots"></div>
-  </section>
-  <div class="note">Our Work • Aluminium • Glass • Doors • Windows • UPVC • Partitions • Cabins</div>
+
+<div class="brand">
+  RR <span>ALUMINIUM &amp; GLASS WORK</span>
+</div>
+
+<section class="slider">
+  <div id="slides"></div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<div class="services">
+  <b>Our Services</b><br>
+  Aluminium • Glass • Doors • Windows • UPVC • Partitions • Cabins •
+  Jali Door • Aluminium Kitchen • Sliding Window
+</div>
+
+<div class="contact">
+  <h3>RR Aluminium &amp; Glass Work</h3>
+
+  <p>
+    📞 <a href="tel:+917275333176">+91 7275333176</a>
+    &nbsp; | &nbsp;
+    <a href="tel:+919599636931">+91 9599636931</a>
+  </p>
+
+  <p>
+    💬 <a href="https://wa.me/917275333176">WhatsApp: +91 7275333176</a>
+  </p>
+
+  <p>
+    📍 Ch. Ratan Laal Bidhuri Market, Near Amrita Hospital Gate No. 2,
+    Sector 88, Faridabad
+  </p>
+
+  <p>
+    Website: RR Aluminium and Glass Work
+  </p>
+</div>
+
+<div class="footer">
+  © RR Aluminium &amp; Glass Work
+</div>
+
 </main>
+
+<!-- FULL SCREEN PHOTO VIEWER -->
+<div class="viewer" id="viewer">
+
+  <button class="closeViewer" id="closeViewer">×</button>
+
+  <img id="viewerImg" src="" alt="RR Aluminium Work">
+
+  <div class="zoomButtons">
+    <button id="zoomOut">−</button>
+    <button id="zoomReset">↺</button>
+    <button id="zoomIn">+</button>
+  </div>
+
+</div>
+
 <script>
+
 const phone = "917275333176";
+
 const slides = [
-  {image:"work1.png",title:"Aluminium Door Work",desc:"Custom aluminium door with glass panels and durable frame finish."},
-  {image:"work2.jpg",title:"Glass Partition Work",desc:"Modern glass partition installation for clean and spacious interiors."},
-  {image:"work3.jpg",title:"Commercial Aluminium & Glass Work",desc:"Aluminium and glass façade, windows and entrance solutions."},
-  {image:"work4.jpg",title:"LED Designer Mirror",desc:"Custom mirror installation for bathroom and interior spaces."},
-  {image:"work5.jpg",title:"Aluminium Sliding Door",desc:"Elegant aluminium sliding glass door for modern interiors."},
-  {image:"work6.jpg",title:"UPVC Window Work",desc:"UPVC window installation with glass for a clean, modern finish."},
-  {image:"work7.jpg",title:"Glass & Aluminium Cabin",desc:"Custom glass cabin and partition work for offices and commercial spaces."},
-  {image:"work8.jpg",title:"Aluminium Glass Door",desc:"Aluminium-framed glass door installation for homes and offices."},
-  {image:"work9.jpg",title:"Glass Cabin",desc:"Toughened glass cabin and office partition work."},
-  {image:"work10.jpg",title:"Aluminium & Glass Partition",desc:"Custom partition with aluminium framing and glass panels."},
-  {image:"new1.jpg",title:"Glass Cabin",desc:"Decorative glass cabin work with ribbed glass and aluminium framing."},
-  {image:"new2.jpg",title:"Glass Partition",desc:"Modern office glass partitions with designer patterned glass."},
-  {image:"new3.jpg",title:"Aluminium Kitchen",desc:"Custom aluminium kitchen cabinets and storage with durable finish."},
-  {image:"new4.jpg",title:"Jali Door",desc:"Designer jali door with aluminium frame for ventilation and style."},
-  {image:"new5.jpg",title:"Aluminium Cabin",desc:"Outdoor aluminium cabin with glass panels and strong frame construction."},
-  {image:"new6.jpg",title:"Aluminium Sliding Window",desc:"Aluminium sliding window with clear glass and smooth operation."},
-  {image:"new7.jpg",title:"Glass Door",desc:"Large aluminium-framed glass door installation for modern interiors."},
-  {image:"new8.jpg",title:"Aluminium Glass Kitchen",desc:"Modern kitchen with aluminium cabinets, glass panels and mirror backsplash."},
-  {image:"new9.jpg",title:"Aluminium Wardrobe",desc:"Designer aluminium wardrobe with ribbed glass panels and modern finish."},
-  {image:"new10.jpg",title:"Mosquito Net Door",desc:"Custom aluminium mosquito-net door with durable mesh and frame."}
+
+{image:"work1.png",title:"Aluminium Door Work",desc:"Custom aluminium door with glass panels and durable frame finish."},
+
+{image:"work2.jpg",title:"Glass Partition Work",desc:"Modern glass partition installation for clean and spacious interiors."},
+
+{image:"work3.jpg",title:"Commercial Aluminium & Glass Work",desc:"Aluminium and glass façade, windows and entrance solutions."},
+
+{image:"work4.jpg",title:"LED Designer Mirror",desc:"Custom mirror installation for bathroom and interior spaces."},
+
+{image:"work5.jpg",title:"Aluminium Sliding Door",desc:"Elegant aluminium sliding glass door for modern interiors."},
+
+{image:"work6.jpg",title:"UPVC Window Work",desc:"UPVC window installation with glass for a clean, modern finish."},
+
+{image:"work7.jpg",title:"Glass & Aluminium Cabin",desc:"Custom glass cabin and partition work for offices and commercial spaces."},
+
+{image:"work8.jpg",title:"Aluminium Glass Door",desc:"Aluminium-framed glass door installation for homes and offices."},
+
+{image:"work9.jpg",title:"Glass Cabin",desc:"Toughened glass cabin and office partition work."},
+
+{image:"work10.jpg",title:"Aluminium & Glass Partition",desc:"Custom partition with aluminium framing and glass panels."},
+
+{image:"new1.jpg",title:"Glass Cabin",desc:"Decorative glass cabin work with ribbed glass and aluminium framing."},
+
+{image:"new2.jpg",title:"Glass Partition",desc:"Modern office glass partitions with designer patterned glass."},
+
+{image:"new3.jpg",title:"Aluminium Kitchen",desc:"Custom aluminium kitchen cabinets and storage with durable finish."},
+
+{image:"new4.jpg",title:"Jali Door",desc:"Designer jali door with aluminium frame for ventilation and style."},
+
+{image:"new5.jpg",title:"Aluminium Cabin",desc:"Outdoor aluminium cabin with glass panels and strong frame construction."},
+
+{image:"new6.jpg",title:"Aluminium Sliding Window",desc:"Aluminium sliding window with clear glass and smooth operation."},
+
+{image:"new7.jpg",title:"Glass Door",desc:"Large aluminium-framed glass door installation for modern interiors."},
+
+{image:"new8.jpg",title:"Aluminium Glass Kitchen",desc:"Modern kitchen with aluminium cabinets, glass panels and mirror backsplash."},
+
+{image:"new9.jpg",title:"Aluminium Wardrobe",desc:"Designer aluminium wardrobe with ribbed glass panels and modern finish."},
+
+{image:"new10.jpg",title:"Mosquito Net Door",desc:"Custom aluminium mosquito-net door with durable mesh and frame."}
+
 ];
-const wrap=document.getElementById("slides"),dots=document.getElementById("dots");
+
+const wrap=document.getElementById("slides");
+const dots=document.getElementById("dots");
+
 slides.forEach((s,i)=>{
- const el=document.createElement("article");el.className="slide"+(i===0?" active":"");
- el.innerHTML=`<div class="photo"><div class="overlay-brand">RR <span>ALUMINIUM &amp; GLASS WORK</span></div><img src="${s.image}" alt="${s.title}" loading="${i===0?"eager":"lazy"}"><div class="actions"><a class="call" href="tel:+917275333176">📞 Call Now</a><a class="whatsapp" href="https://wa.me/${phone}?text=Hello%20RR%20Aluminium%20%26%20Glass%20Work%2C%20I%20want%20to%20discuss%20a%20work%20project.">💬 WhatsApp</a></div></div><div class="info"><h2>${s.title}</h2><p>${s.desc}</p></div>`;
- wrap.appendChild(el);
- const dot=document.createElement("span");dot.className="dot"+(i===0?" active":"");dot.title=s.title;dot.onclick=()=>show(i);dots.appendChild(dot);
+
+  const el=document.createElement("article");
+
+  el.className="slide"+(i===0?" active":"");
+
+  el.innerHTML=`
+    <div class="photo">
+
+      <div class="overlay-brand">
+        RR <span>ALUMINIUM &amp; GLASS WORK</span>
+      </div>
+
+      <img
+        src="${s.image}"
+        alt="${s.title}"
+        loading="${i===0?"eager":"lazy"}"
+        onclick="openViewer('${s.image}')"
+      >
+
+      <div class="actions">
+        <a class="call" href="tel:+917275333176">
+          📞 Call Now
+        </a>
+
+        <a class="whatsapp"
+        href="https://wa.me/${phone}?text=Hello%20RR%20Aluminium%20%26%20Glass%20Work%2C%20I%20want%20to%20discuss%20a%20work%20project.">
+          💬 WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <div class="info">
+      <h2>${s.title}</h2>
+      <p>${s.desc}</p>
+    </div>
+  `;
+
+  wrap.appendChild(el);
+
+  const dot=document.createElement("span");
+
+  dot.className="dot"+(i===0?" active":"");
+
+  dot.title=s.title;
+
+  dot.onclick=()=>show(i);
+
+  dots.appendChild(dot);
+
 });
+
 let current=0;
-function show(n){current=(n+slides.length)%slides.length;document.querySelectorAll(".slide").forEach((x,i)=>x.classList.toggle("active",i===current));document.querySelectorAll(".dot").forEach((x,i)=>x.classList.toggle("active",i===current));}
+
+function show(n){
+
+  current=(n+slides.length)%slides.length;
+
+  document.querySelectorAll(".slide").forEach(
+    (x,i)=>x.classList.toggle("active",i===current)
+  );
+
+  document.querySelectorAll(".dot").forEach(
+    (x,i)=>x.classList.toggle("active",i===current)
+  );
+
+}
+
 setInterval(()=>show(current+1),4500);
+
+
+/* SWIPE */
+
 let startX=0;
-document.querySelector('.slider').addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
-document.querySelector('.slider').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>45)show(current+(dx<0?1:-1));},{passive:true});
+
+document.querySelector(".slider").addEventListener(
+  "touchstart",
+  e=>startX=e.touches[0].clientX,
+  {passive:true}
+);
+
+document.querySelector(".slider").addEventListener(
+  "touchend",
+  e=>{
+    const dx=e.changedTouches[0].clientX-startX;
+
+    if(Math.abs(dx)>45){
+      show(current+(dx<0?1:-1));
+    }
+  },
+  {passive:true}
+);
+
+
+/* PHOTO VIEWER + ZOOM */
+
+const viewer=document.getElementById("viewer");
+const viewerImg=document.getElementById("viewerImg");
+
+let zoom=1;
+
+function openViewer(src){
+
+  viewerImg.src=src;
+
+  zoom=1;
+
+  viewerImg.style.transform="scale(1)";
+
+  viewer.classList.add("show");
+
+}
+
+function closeViewer(){
+
+  viewer.classList.remove("show");
+
+  viewerImg.src="";
+
+}
+
+document.getElementById("closeViewer").onclick=closeViewer;
+
+document.getElementById("zoomIn").onclick=()=>{
+
+  zoom=Math.min(zoom+0.25,4);
+
+  viewerImg.style.transform=`scale(${zoom})`;
+
+};
+
+document.getElementById("zoomOut").onclick=()=>{
+
+  zoom=Math.max(zoom-0.25,1);
+
+  viewerImg.style.transform=`scale(${zoom})`;
+
+};
+
+document.getElementById("zoomReset").onclick=()=>{
+
+  zoom=1;
+
+  viewerImg.style.transform="scale(1)";
+
+};
+
+
+/* TAP OUTSIDE TO CLOSE */
+
+viewer.addEventListener("click",e=>{
+
+  if(e.target===viewer){
+    closeViewer();
+  }
+
+});
+
+
+/* ESCAPE */
+
+document.addEventListener("keydown",e=>{
+
+  if(e.key==="Escape"){
+    closeViewer();
+  }
+
+});
+
 </script>
+
 </body>
 </html>
