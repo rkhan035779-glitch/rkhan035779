@@ -12,375 +12,458 @@
 html{scroll-behavior:smooth}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:#17202a;
-  background:#fff;
-  line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+color:#17202a;
+background:#fff;
+line-height:1.6;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(255,255,255,.96);
-  border-bottom:1px solid #e7e9ec;
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(255,255,255,.97);
+border-bottom:1px solid #e7e9ec;
 }
 
 .nav{
-  max-width:1150px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+max-width:1150px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
 .logo{
-  font-weight:800;
-  font-size:20px;
-  letter-spacing:.5px
+font-weight:800;
+font-size:20px;
+letter-spacing:.5px
 }
 
 .logo span{color:#1570ef}
 
 nav a{
-  margin-left:22px;
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
-  font-size:14px
+margin-left:22px;
+text-decoration:none;
+color:#333;
+font-weight:600;
+font-size:14px
 }
 
-.hero{
-  background:linear-gradient(135deg,#101820,#253746);
-  color:white;
-  padding:90px 20px
+/* =========================
+   TOP 20 PHOTO SLIDER
+========================= */
+
+.top-slider{
+position:relative;
+width:100%;
+background:#111;
+overflow:hidden;
 }
 
-.hero-inner{
-  max-width:1150px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
-  align-items:center
+.top-track{
+display:flex;
+width:100%;
+transition:transform .55s ease;
 }
 
-.badge{
-  display:inline-block;
-  padding:7px 12px;
-  border:1px solid #6d7c89;
-  border-radius:30px;
-  font-size:13px;
-  margin-bottom:18px;
-  color:#dbeafe
+.top-slide{
+position:relative;
+min-width:100%;
+height:520px;
+background:#111;
+overflow:hidden;
 }
 
-h1{
-  font-size:clamp(38px,6vw,64px);
-  line-height:1.04;
-  margin-bottom:20px
+.top-slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+cursor:zoom-in;
 }
 
-.hero p{
-  font-size:18px;
-  color:#d7dee5;
-  max-width:650px
+.top-overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:45px 25px 25px;
+background:linear-gradient(transparent,rgba(0,0,0,.88));
+color:white;
 }
 
-.buttons{
-  margin-top:28px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap
+.top-overlay h2{
+font-size:clamp(24px,4vw,42px);
+margin-bottom:12px;
+text-shadow:0 2px 5px #000;
 }
 
-.btn{
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:700
+.top-buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
-.primary{
-  background:#1570ef;
-  color:white
+.top-btn{
+display:inline-block;
+padding:11px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:700;
+font-size:15px;
 }
 
-.secondary{
-  border:1px solid #8d9aa6;
-  color:white
+.call-btn{
+background:#1570ef;
+color:white;
 }
 
-.hero-card{
-  background:white;
-  color:#17202a;
-  border-radius:18px;
-  padding:28px;
-  box-shadow:0 20px 50px rgba(0,0,0,.25)
+.whatsapp-btn{
+background:#20b858;
+color:white;
 }
 
-.hero-card h3{
-  margin-bottom:12px;
-  font-size:24px
+.top-arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:50px;
+height:50px;
+border:0;
+border-radius:50%;
+background:rgba(0,0,0,.65);
+color:white;
+font-size:32px;
+cursor:pointer;
+z-index:5;
 }
 
-.hero-card p{
-  color:#58636e;
-  font-size:15px;
-  margin-bottom:15px
+.top-arrow:hover{
+background:#1570ef;
 }
 
-.hero-card a{
-  color:#1570ef;
-  text-decoration:none;
-  font-weight:700
+.top-prev{left:15px}
+.top-next{right:15px}
+
+.top-dots{
+position:absolute;
+bottom:15px;
+right:20px;
+display:flex;
+gap:5px;
+z-index:6;
 }
 
-section{
-  padding:75px 20px
+.top-dot{
+width:8px;
+height:8px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.5);
+cursor:pointer;
 }
 
-.container{
-  max-width:1150px;
-  margin:auto
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:40px
-}
-
-.section-title h2{
-  font-size:36px;
-  margin-bottom:8px
-}
-
-.section-title p{
-  color:#68727d
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px
-}
-
-.card{
-  background:white;
-  border:1px solid #e6e9ed;
-  border-radius:15px;
-  padding:25px;
-  transition:.2s
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(0,0,0,.07)
-}
-
-.icon{
-  font-size:34px;
-  margin-bottom:14px
-}
-
-.card h3{
-  margin-bottom:8px
-}
-
-.card p{
-  color:#68727d;
-  font-size:14px
-}
-
-.about{
-  background:white
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center
-}
-
-.about-box{
-  background:#eef4fa;
-  border-radius:18px;
-  padding:35px
-}
-
-.about h2{
-  font-size:38px;
-  margin-bottom:15px
-}
-
-.about p{
-  color:#5f6973;
-  margin-bottom:14px
-}
-
-.points{
-  list-style:none;
-  margin-top:20px
-}
-
-.points li{
-  margin:12px 0;
-  font-weight:600
-}
-
-.points li::before{
-  content:"✓";
-  color:#1570ef;
-  font-weight:900;
-  margin-right:10px
-}
-
-.contact{
-  background:#111a22;
-  color:white
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px
-}
-
-.contact-card{
-  background:#1c2933;
-  border:1px solid #33434f;
-  border-radius:16px;
-  padding:28px
-}
-
-.contact-card p{
-  color:#cbd5dc;
-  margin:8px 0 20px
-}
-
-.contact a{
-  color:white;
-  text-decoration:none
-}
-
-footer{
-  background:#0c1217;
-  color:#aeb8c0;
-  text-align:center;
-  padding:22px 20px;
-  font-size:13px
+.top-dot.active{
+background:white;
+transform:scale(1.4);
 }
 
 
 /* =========================
-   PHOTO SLIDER
+   HERO
 ========================= */
 
-.gallery-wrap{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  border-radius:18px;
+.hero{
+background:linear-gradient(135deg,#101820,#253746);
+color:white;
+padding:90px 20px
 }
 
-.gallery{
-  display:flex;
-  gap:0;
-  width:100%;
-  overflow:hidden;
-  position:relative;
-  transition:transform .55s ease;
+.hero-inner{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:50px;
+align-items:center
 }
 
-.gallery-item{
-  background:white;
-  border:1px solid #e6e9ed;
-  border-radius:15px;
-  overflow:hidden;
-  flex:0 0 100%;
-  width:100%;
-  min-width:100%;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
+.badge{
+display:inline-block;
+padding:7px 12px;
+border:1px solid #6d7c89;
+border-radius:30px;
+font-size:13px;
+margin-bottom:18px;
+color:#dbeafe
 }
 
-.gallery-item img{
-  width:100%;
-  height:480px;
-  object-fit:cover;
-  display:block;
-  cursor:zoom-in;
-  user-select:none;
-  -webkit-user-drag:none;
+h1{
+font-size:clamp(38px,6vw,64px);
+line-height:1.04;
+margin-bottom:20px
 }
 
-.gallery-item figcaption{
-  padding:14px 16px;
-  font-weight:700;
-  color:#303a44;
-  text-align:center;
+.hero p{
+font-size:18px;
+color:#d7dee5;
+max-width:650px
+}
+
+.buttons{
+margin-top:28px;
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-block;
+padding:13px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:700
+}
+
+.primary{
+background:#1570ef;
+color:white
+}
+
+.secondary{
+border:1px solid #8d9aa6;
+color:white
+}
+
+.hero-card{
+background:white;
+color:#17202a;
+border-radius:18px;
+padding:28px;
+box-shadow:0 20px 50px rgba(0,0,0,.25)
+}
+
+.hero-card h3{
+margin-bottom:12px;
+font-size:24px
+}
+
+.hero-card p{
+color:#58636e;
+font-size:15px;
+margin-bottom:15px
+}
+
+.hero-card a{
+color:#1570ef;
+text-decoration:none;
+font-weight:700
 }
 
 
-/* Slider arrows */
+/* =========================
+   SECTIONS
+========================= */
 
-.slider-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:48px;
-  height:48px;
-  border:none;
-  border-radius:50%;
-  background:rgba(0,0,0,.65);
-  color:white;
-  font-size:28px;
-  line-height:48px;
-  text-align:center;
-  cursor:pointer;
-  z-index:5;
-  box-shadow:0 4px 15px rgba(0,0,0,.25);
+section{
+padding:75px 20px
 }
 
-.slider-btn:hover{
-  background:#1570ef;
+.container{
+max-width:1150px;
+margin:auto
 }
 
-.slider-prev{
-  left:15px;
+.section-title{
+text-align:center;
+margin-bottom:40px
 }
 
-.slider-next{
-  right:15px;
+.section-title h2{
+font-size:36px;
+margin-bottom:8px
+}
+
+.section-title p{
+color:#68727d
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+
+.card{
+background:white;
+border:1px solid #e6e9ed;
+border-radius:15px;
+padding:25px;
+transition:.2s
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,.07)
+}
+
+.icon{
+font-size:34px;
+margin-bottom:14px
+}
+
+.card h3{
+margin-bottom:8px
+}
+
+.card p{
+color:#68727d;
+font-size:14px
 }
 
 
-/* Slider dots */
+/* =========================
+   REMAINING PHOTOS
+========================= */
 
-.slider-dots{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:7px;
-  margin-top:18px;
-  flex-wrap:wrap;
+.remaining-gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
 }
 
-.slider-dot{
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  border:none;
-  background:#c7cdd3;
-  padding:0;
-  cursor:pointer;
+.photo-card{
+background:white;
+border:1px solid #e3e7eb;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
-.slider-dot.active{
-  background:#1570ef;
-  transform:scale(1.35);
+.photo-card img{
+width:100%;
+height:360px;
+object-fit:cover;
+display:block;
+cursor:zoom-in;
+}
+
+.photo-info{
+padding:18px;
+}
+
+.photo-info h3{
+font-size:20px;
+margin-bottom:7px;
+}
+
+.photo-info p{
+font-size:14px;
+color:#68727d;
+}
+
+.photo-view{
+display:inline-block;
+margin-top:12px;
+padding:9px 14px;
+border-radius:7px;
+background:#1570ef;
+color:white;
+text-decoration:none;
+font-weight:700;
+font-size:13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+background:white
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center
+}
+
+.about-box{
+background:#eef4fa;
+border-radius:18px;
+padding:35px
+}
+
+.about h2{
+font-size:38px;
+margin-bottom:15px
+}
+
+.about p{
+color:#5f6973;
+margin-bottom:14px
+}
+
+.points{
+list-style:none;
+margin-top:20px
+}
+
+.points li{
+margin:12px 0;
+font-weight:600
+}
+
+.points li::before{
+content:"✓";
+color:#1570ef;
+font-weight:900;
+margin-right:10px
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+background:#111a22;
+color:white
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px
+}
+
+.contact-card{
+background:#1c2933;
+border:1px solid #33434f;
+border-radius:16px;
+padding:28px
+}
+
+.contact-card p{
+color:#cbd5dc;
+margin:8px 0 20px
+}
+
+.contact a{
+color:white;
+text-decoration:none
+}
+
+footer{
+background:#0c1217;
+color:#aeb8c0;
+text-align:center;
+padding:22px 20px;
+font-size:13px
 }
 
 
@@ -389,122 +472,117 @@ footer{
 ========================= */
 
 .photo-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.96);
-  z-index:99999;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
+display:none;
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.96);
+z-index:99999;
+align-items:center;
+justify-content:center;
+overflow:hidden;
 }
 
 .photo-modal.show{
-  display:flex;
+display:flex;
 }
 
 .modal-image{
-  max-width:92vw;
-  max-height:82vh;
-  object-fit:contain;
-  cursor:grab;
-  transform-origin:center center;
-  transition:transform .15s ease;
-  user-select:none;
-  -webkit-user-drag:none;
+max-width:92vw;
+max-height:82vh;
+object-fit:contain;
+cursor:grab;
+transform-origin:center center;
+transition:transform .15s ease;
+user-select:none;
+-webkit-user-drag:none;
 }
 
 .modal-image:active{
-  cursor:grabbing;
+cursor:grabbing;
 }
 
 .modal-close{
-  position:absolute;
-  top:15px;
-  right:18px;
-  width:48px;
-  height:48px;
-  border:0;
-  border-radius:50%;
-  background:rgba(255,255,255,.16);
-  color:white;
-  font-size:32px;
-  cursor:pointer;
-  z-index:10;
+position:absolute;
+top:15px;
+right:18px;
+width:48px;
+height:48px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.16);
+color:white;
+font-size:32px;
+cursor:pointer;
+z-index:10;
 }
 
 .modal-close:hover{
-  background:#1570ef;
+background:#1570ef;
 }
 
 .zoom-controls{
-  position:absolute;
-  bottom:25px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:10px;
-  z-index:10;
+position:absolute;
+bottom:25px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+z-index:10;
 }
 
 .zoom-btn{
-  width:50px;
-  height:50px;
-  border:0;
-  border-radius:50%;
-  background:rgba(255,255,255,.18);
-  color:white;
-  font-size:28px;
-  cursor:pointer;
+width:50px;
+height:50px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.18);
+color:white;
+font-size:28px;
+cursor:pointer;
 }
 
 .zoom-btn:hover{
-  background:#1570ef;
+background:#1570ef;
 }
 
 .modal-prev,
 .modal-next{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:52px;
-  height:52px;
-  border:0;
-  border-radius:50%;
-  background:rgba(255,255,255,.16);
-  color:white;
-  font-size:30px;
-  cursor:pointer;
-  z-index:10;
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:52px;
+height:52px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.16);
+color:white;
+font-size:30px;
+cursor:pointer;
+z-index:10;
 }
 
-.modal-prev{
-  left:18px;
-}
-
-.modal-next{
-  right:18px;
-}
+.modal-prev{left:18px}
+.modal-next{right:18px}
 
 .modal-prev:hover,
 .modal-next:hover{
-  background:#1570ef;
+background:#1570ef;
 }
 
 .modal-caption{
-  position:absolute;
-  bottom:88px;
-  left:50%;
-  transform:translateX(-50%);
-  color:white;
-  background:rgba(0,0,0,.55);
-  padding:7px 15px;
-  border-radius:20px;
-  font-size:14px;
-  max-width:80%;
-  text-align:center;
+position:absolute;
+bottom:88px;
+left:50%;
+transform:translateX(-50%);
+color:white;
+background:rgba(0,0,0,.55);
+padding:7px 15px;
+border-radius:20px;
+font-size:14px;
+max-width:80%;
+text-align:center;
 }
 
 
@@ -514,82 +592,89 @@ footer{
 
 @media(max-width:800px){
 
-  nav{
-    display:none
-  }
+nav{display:none}
 
-  .hero-inner,
-  .about-grid,
-  .contact-grid{
-    grid-template-columns:1fr
-  }
+.hero-inner,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr
+}
 
-  .grid{
-    grid-template-columns:1fr 1fr
-  }
+.grid{
+grid-template-columns:1fr 1fr
+}
 
-  .hero{
-    padding:65px 20px
-  }
+.hero{
+padding:65px 20px
+}
 
-  .gallery-item img{
-    height:360px
-  }
+.top-slide{
+height:420px;
+}
+
+.remaining-gallery{
+grid-template-columns:1fr;
+}
+
+.photo-card img{
+height:330px;
+}
 
 }
 
 @media(max-width:520px){
 
-  .grid{
-    grid-template-columns:1fr
-  }
+.grid{
+grid-template-columns:1fr
+}
 
-  section{
-    padding:55px 18px
-  }
+section{
+padding:55px 18px
+}
 
-  .hero h1{
-    font-size:42px
-  }
+.hero h1{
+font-size:42px
+}
 
-  .gallery-item img{
-    height:280px
-  }
+.top-slide{
+height:390px;
+}
 
-  .slider-btn{
-    width:42px;
-    height:42px;
-    line-height:42px;
-    font-size:24px;
-  }
+.top-overlay{
+padding:35px 18px 18px;
+}
 
-  .slider-prev{
-    left:8px;
-  }
+.top-overlay h2{
+font-size:25px;
+}
 
-  .slider-next{
-    right:8px;
-  }
+.top-arrow{
+width:42px;
+height:42px;
+font-size:25px;
+}
 
-  .modal-prev,
-  .modal-next{
-    width:42px;
-    height:42px;
-    font-size:24px;
-  }
+.top-prev{left:7px}
+.top-next{right:7px}
 
-  .modal-prev{
-    left:8px;
-  }
+.photo-card img{
+height:280px;
+}
 
-  .modal-next{
-    right:8px;
-  }
+.modal-prev,
+.modal-next{
+width:42px;
+height:42px;
+font-size:24px;
+}
 
-  .modal-image{
-    max-width:96vw;
-    max-height:78vh;
-  }
+.modal-prev{left:8px}
+.modal-next{right:8px}
+
+.modal-image{
+max-width:96vw;
+max-height:78vh;
+}
 
 }
 </style>
@@ -599,11 +684,14 @@ footer{
 
 <header>
 <div class="nav">
-<div class="logo">RR <span>ALUMINIUM & GLASS WORK</span></div>
+
+<div class="logo">
+RR <span>ALUMINIUM & GLASS WORK</span>
+</div>
 
 <nav>
 <a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
+<a href="#remaining">Gallery</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -611,6 +699,26 @@ footer{
 </div>
 </header>
 
+
+<!-- ==================================================
+     TOP 20 PHOTO SLIDER
+================================================== -->
+
+<div class="top-slider" id="homeSlider">
+
+<div class="top-track" id="topTrack"></div>
+
+<button class="top-arrow top-prev" id="topPrev" type="button">‹</button>
+<button class="top-arrow top-next" id="topNext" type="button">›</button>
+
+<div class="top-dots" id="topDots"></div>
+
+</div>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section class="hero">
 
@@ -666,6 +774,10 @@ Tell us what you need and our team can discuss the work, measurements and requir
 </section>
 
 
+<!-- ==================================================
+     SERVICES
+================================================== -->
+
 <section id="services">
 
 <div class="container">
@@ -674,7 +786,6 @@ Tell us what you need and our team can discuss the work, measurements and requir
 <h2>Our Services</h2>
 <p>Professional solutions for residential and commercial projects.</p>
 </div>
-
 
 <div class="grid">
 
@@ -686,7 +797,6 @@ Clean, durable aluminium window solutions designed for modern spaces.
 </p>
 </div>
 
-
 <div class="card">
 <div class="icon">🚪</div>
 <h3>Aluminium Doors</h3>
@@ -695,7 +805,6 @@ Strong and stylish aluminium doors for homes, offices and shops.
 </p>
 </div>
 
-
 <div class="card">
 <div class="icon">◻️</div>
 <h3>Toughened Glass</h3>
@@ -703,7 +812,6 @@ Strong and stylish aluminium doors for homes, offices and shops.
 Quality toughened glass solutions for safety, style and functionality.
 </p>
 </div>
-
 
 <div class="card">
 <div class="icon">✨</div>
@@ -720,516 +828,29 @@ Mirrors and structural glazing for a clean, contemporary finish.
 </section>
 
 
-<section id="gallery">
+<!-- ==================================================
+     REMAINING PHOTOS
+================================================== -->
+
+<section id="remaining">
 
 <div class="container">
 
 <div class="section-title">
-<h2>Our Recent Work</h2>
-<p>Real project work by RR Aluminium & Glass Work.</p>
+<h2>More Recent Work</h2>
+<p>Scroll down to see our other aluminium and glass projects.</p>
 </div>
 
-
-<div class="gallery-wrap">
-
-<button class="slider-btn slider-prev" type="button" aria-label="Previous photo">
-‹
-</button>
-
-
-<div class="gallery">
-
-
-<figure class="gallery-item">
-<img src="gallery/project-1.jpg" alt="Aluminium & Glass Entrance" loading="lazy">
-<figcaption>Aluminium & Glass Entrance</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-2.jpg" alt="Aluminium Kitchen Work" loading="lazy">
-<figcaption>Aluminium Kitchen Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-3.jpg" alt="Aluminium Glass Partition" loading="lazy">
-<figcaption>Aluminium Glass Partition</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-4.jpg" alt="Interior Glass Partition" loading="lazy">
-<figcaption>Interior Glass Partition</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-5.jpg" alt="Glass Display Work" loading="lazy">
-<figcaption>Glass Display Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-6.jpg" alt="Decorative Glass Doors" loading="lazy">
-<figcaption>Decorative Glass Doors</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-7.jpg" alt="Aluminium Glass Door" loading="lazy">
-<figcaption>Aluminium Glass Door</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-8.jpg" alt="Commercial Aluminium & Glass" loading="lazy">
-<figcaption>Commercial Aluminium & Glass</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-9.jpg" alt="Designer Mirror" loading="lazy">
-<figcaption>Designer Mirror</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/project-10.jpg" alt="Decorative Glass Partition" loading="lazy">
-<figcaption>Decorative Glass Partition</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20250915-WA0010.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20251014-WA0001.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20251014-WA0002.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260617-WA0005.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260622-WA0001.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260622-WA0002.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260622-WA0012.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260622-WA0014.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260622-WA0015.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260622-WA0024.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260802-WA0005.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG-20260808-WA0001.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240512_080721.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240530_191914.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240606_171126.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240613_144243.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240616_194249.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240707_161651.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240707_165924.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240707_175250.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240712_191348.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240712_191945.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240715_180125.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240720_204501.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240815_184617.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240827_182043.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240829_191459.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240830_114133.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240830_181455.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240830_200755.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240830_201027.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240901_132038.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240906_212537.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240910_175557.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240914_154558.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240918_155532.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240918_155609.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240925_135209.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20240926_161023.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241005_115205.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241008_163944.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241009_181801.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241011_160530.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241019_142742.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241027_174027.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241029_132858.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241106_183224.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241108_182441.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241113_132550.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241114_180821.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241116_180229.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241117_175106.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241118_191014.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241205_114405.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241209_181044.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241210_153415.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20241227_201117.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250403_112153.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250413_155839.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250610_135902.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250621_120701.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250621_120705.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250910_142409.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250920_112849.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20250920_201746.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20251110_183051.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20260104_185942.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20260120_133644.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20260120_191042.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/IMG_20260325_180034.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_01.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_02.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_03.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_04.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_05.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_06.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_07.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_08.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_09.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_10.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_11.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_12.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_13.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_14.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-<figure class="gallery-item">
-<img src="gallery/photo_15.jpg" alt="RR Aluminium & Glass Work" loading="lazy">
-<figcaption>RR Aluminium & Glass Work</figcaption>
-</figure>
-
-</div>
-
-
-<button class="slider-btn slider-next" type="button" aria-label="Next photo">
-›
-</button>
-
-</div>
-
-<div class="slider-dots" id="sliderDots"></div>
+<div class="remaining-gallery" id="remainingGallery"></div>
 
 </div>
 
 </section>
 
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
 
 <section class="about" id="about">
 
@@ -1277,6 +898,10 @@ Open in Google Maps
 
 </section>
 
+
+<!-- ==================================================
+     CONTACT
+================================================== -->
 
 <section id="contact" class="contact">
 
@@ -1338,39 +963,29 @@ Message on WhatsApp
 </footer>
 
 
-<!-- FULL SCREEN PHOTO VIEWER -->
+<!-- ==================================================
+     FULL SCREEN PHOTO VIEWER
+================================================== -->
 
 <div class="photo-modal" id="photoModal">
 
-<button class="modal-close" id="modalClose" type="button">
-×
-</button>
+<button class="modal-close" id="modalClose" type="button">×</button>
 
-<button class="modal-prev" id="modalPrev" type="button">
-‹
-</button>
+<button class="modal-prev" id="modalPrev" type="button">‹</button>
 
 <img class="modal-image" id="modalImage" src="" alt="">
 
-<button class="modal-next" id="modalNext" type="button">
-›
-</button>
+<button class="modal-next" id="modalNext" type="button">›</button>
 
 <div class="modal-caption" id="modalCaption"></div>
 
 <div class="zoom-controls">
 
-<button class="zoom-btn" id="zoomOut" type="button">
-−
-</button>
+<button class="zoom-btn" id="zoomOut" type="button">−</button>
 
-<button class="zoom-btn" id="zoomReset" type="button">
-↺
-</button>
+<button class="zoom-btn" id="zoomReset" type="button">↺</button>
 
-<button class="zoom-btn" id="zoomIn" type="button">
-+
-</button>
+<button class="zoom-btn" id="zoomIn" type="button">+</button>
 
 </div>
 
@@ -1379,199 +994,525 @@ Message on WhatsApp
 
 <script>
 
-/* =========================
-   PHOTO SLIDER
-========================= */
+/* ==================================================
+   ALL PHOTOS
+================================================== */
 
-const gallery = document.querySelector(".gallery");
-const slides = Array.from(document.querySelectorAll(".gallery-item"));
-const prevBtn = document.querySelector(".slider-prev");
-const nextBtn = document.querySelector(".slider-next");
-const dotsContainer = document.querySelector("#sliderDots");
+const photos = [
 
-let currentSlide = 0;
-let autoSlide;
+"gallery/project-1.jpg",
+"gallery/project-2.jpg",
+"gallery/project-3.jpg",
+"gallery/project-4.jpg",
+"gallery/project-5.jpg",
+"gallery/project-6.jpg",
+"gallery/project-7.jpg",
+"gallery/project-8.jpg",
+"gallery/project-9.jpg",
+"gallery/project-10.jpg",
+
+"gallery/IMG-20250915-WA0010.jpg",
+"gallery/IMG-20251014-WA0001.jpg",
+"gallery/IMG-20251014-WA0002.jpg",
+"gallery/IMG-20260617-WA0005.jpg",
+"gallery/IMG-20260622-WA0001.jpg",
+"gallery/IMG-20260622-WA0002.jpg",
+"gallery/IMG-20260622-WA0012.jpg",
+"gallery/IMG-20260622-WA0014.jpg",
+"gallery/IMG-20260622-WA0015.jpg",
+"gallery/IMG-20260622-WA0024.jpg",
+
+"gallery/IMG-20260802-WA0005.jpg",
+"gallery/IMG-20260808-WA0001.jpg",
+
+"gallery/IMG_20240512_080721.jpg",
+"gallery/IMG_20240530_191914.jpg",
+"gallery/IMG_20240606_171126.jpg",
+"gallery/IMG_20240613_144243.jpg",
+"gallery/IMG_20240616_194249.jpg",
+"gallery/IMG_20240707_161651.jpg",
+"gallery/IMG_20240707_165924.jpg",
+"gallery/IMG_20240707_175250.jpg",
+"gallery/IMG_20240712_191348.jpg",
+"gallery/IMG_20240712_191945.jpg",
+"gallery/IMG_20240715_180125.jpg",
+"gallery/IMG_20240720_204501.jpg",
+"gallery/IMG_20240815_184617.jpg",
+"gallery/IMG_20240827_182043.jpg",
+"gallery/IMG_20240829_191459.jpg",
+"gallery/IMG_20240830_114133.jpg",
+"gallery/IMG_20240830_181455.jpg",
+"gallery/IMG_20240830_200755.jpg",
+"gallery/IMG_20240830_201027.jpg",
+"gallery/IMG_20240901_132038.jpg",
+"gallery/IMG_20240906_212537.jpg",
+"gallery/IMG_20240910_175557.jpg",
+"gallery/IMG_20240914_154558.jpg",
+"gallery/IMG_20240918_155532.jpg",
+"gallery/IMG_20240918_155609.jpg",
+"gallery/IMG_20240925_135209.jpg",
+"gallery/IMG_20240926_161023.jpg",
+"gallery/IMG_20241005_115205.jpg",
+"gallery/IMG_20241008_163944.jpg",
+"gallery/IMG_20241009_181801.jpg",
+"gallery/IMG_20241011_160530.jpg",
+"gallery/IMG_20241019_142742.jpg",
+"gallery/IMG_20241027_174027.jpg",
+"gallery/IMG_20241029_132858.jpg",
+"gallery/IMG_20241106_183224.jpg",
+"gallery/IMG_20241108_182441.jpg",
+"gallery/IMG_20241113_132550.jpg",
+"gallery/IMG_20241114_180821.jpg",
+"gallery/IMG_20241116_180229.jpg",
+"gallery/IMG_20241117_175106.jpg",
+"gallery/IMG_20241118_191014.jpg",
+"gallery/IMG_20241205_114405.jpg",
+"gallery/IMG_20241209_181044.jpg",
+"gallery/IMG_20241210_153415.jpg",
+"gallery/IMG_20241227_201117.jpg",
+"gallery/IMG_20250403_112153.jpg",
+"gallery/IMG_20250413_155839.jpg",
+"gallery/IMG_20250610_135902.jpg",
+"gallery/IMG_20250621_120701.jpg",
+"gallery/IMG_20250621_120705.jpg",
+"gallery/IMG_20250910_142409.jpg",
+"gallery/IMG_20250920_112849.jpg",
+"gallery/IMG_20250920_201746.jpg",
+"gallery/IMG_20251110_183051.jpg",
+"gallery/IMG_20260104_185942.jpg",
+"gallery/IMG_20260120_133644.jpg",
+"gallery/IMG_20260120_191042.jpg",
+"gallery/IMG_20260325_180034.jpg",
+
+"gallery/photo_01.jpg",
+"gallery/photo_02.jpg",
+"gallery/photo_03.jpg",
+"gallery/photo_04.jpg",
+"gallery/photo_05.jpg",
+"gallery/photo_06.jpg",
+"gallery/photo_07.jpg",
+"gallery/photo_08.jpg",
+"gallery/photo_09.jpg",
+"gallery/photo_10.jpg",
+"gallery/photo_11.jpg",
+"gallery/photo_12.jpg",
+"gallery/photo_13.jpg",
+"gallery/photo_14.jpg",
+"gallery/photo_15.jpg"
+
+];
 
 
-/* Create dots */
+/* ==================================================
+   FIRST 20 = TOP SLIDER
+================================================== */
 
-slides.forEach((slide,index)=>{
+const TOP_COUNT = 20;
 
-  const dot=document.createElement("button");
+const topPhotos = photos.slice(0,TOP_COUNT);
+const remainingPhotos = photos.slice(TOP_COUNT);
 
-  dot.className="slider-dot";
 
-  dot.type="button";
+/* Top slider elements */
 
-  dot.setAttribute("aria-label","Go to photo "+(index+1));
+const topTrack = document.getElementById("topTrack");
+const topDots = document.getElementById("topDots");
+const topPrev = document.getElementById("topPrev");
+const topNext = document.getElementById("topNext");
 
-  dot.addEventListener("click",()=>{
 
-    goToSlide(index);
-    restartAutoSlide();
+/* First 20 captions */
 
-  });
+const topTitles = [
+"Aluminium & Glass Entrance",
+"Aluminium Kitchen Work",
+"Aluminium Glass Partition",
+"Interior Glass Partition",
+"Glass Display Work",
+"Decorative Glass Doors",
+"Aluminium Glass Door",
+"Commercial Aluminium & Glass",
+"Designer Mirror",
+"Decorative Glass Partition",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work",
+"RR Aluminium & Glass Work"
+];
 
-  dotsContainer.appendChild(dot);
+
+/* Create top slider */
+
+topPhotos.forEach((src,index)=>{
+
+const slide=document.createElement("div");
+
+slide.className="top-slide";
+
+slide.innerHTML=`
+
+<img
+src="${src}"
+alt="RR Aluminium & Glass Work"
+loading="${index===0 ? "eager" : "lazy"}"
+>
+
+<div class="top-overlay">
+
+<h2>RR Aluminium & Glass Work</h2>
+
+<div class="top-buttons">
+
+<a
+class="top-btn call-btn"
+href="tel:+917275333176">
+📞 Call
+</a>
+
+<a
+class="top-btn whatsapp-btn"
+href="https://wa.me/917275333176?text=Hello%20RR%20Aluminium%20%26%20Glass%20Work%2C%20I%20need%20a%20quotation."
+target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+`;
+
+topTrack.appendChild(slide);
+
+
+/* Click photo = fullscreen */
+
+slide.querySelector("img").addEventListener("click",()=>{
+
+openPhoto(index);
+
+});
 
 });
 
 
-const dots=Array.from(document.querySelectorAll(".slider-dot"));
+/* Create top dots */
+
+topPhotos.forEach((src,index)=>{
+
+const dot=document.createElement("button");
+
+dot.className="top-dot";
+
+dot.type="button";
+
+dot.addEventListener("click",()=>{
+
+goTopSlide(index);
+restartTopAuto();
+
+});
+
+topDots.appendChild(dot);
+
+});
 
 
-/* Go to slide */
+const topSlides =
+Array.from(document.querySelectorAll(".top-slide"));
 
-function goToSlide(index){
+const topDotButtons =
+Array.from(document.querySelectorAll(".top-dot"));
 
-  if(!slides.length) return;
 
-  currentSlide=(index+slides.length)%slides.length;
+let topIndex=0;
+let topAuto;
 
-  gallery.style.transform=
-    "translateX(-"+(currentSlide*100)+"%)";
 
-  dots.forEach((dot,i)=>{
+/* Top slide */
 
-    dot.classList.toggle(
-      "active",
-      i===currentSlide
-    );
+function goTopSlide(index){
 
-  });
+topIndex=(index+topPhotos.length)%topPhotos.length;
+
+topTrack.style.transform=
+`translateX(-${topIndex*100}%)`;
+
+topDotButtons.forEach((dot,i)=>{
+
+dot.classList.toggle(
+"active",
+i===topIndex
+);
+
+});
 
 }
 
 
 /* Next */
 
-function nextSlide(){
+function nextTop(){
 
-  goToSlide(currentSlide+1);
+goTopSlide(topIndex+1);
 
 }
 
 
 /* Previous */
 
-function previousSlide(){
+function previousTop(){
 
-  goToSlide(currentSlide-1);
-
-}
-
-
-/* Automatic slider */
-
-function startAutoSlide(){
-
-  autoSlide=setInterval(()=>{
-
-    nextSlide();
-
-  },4000);
+goTopSlide(topIndex-1);
 
 }
 
 
-function stopAutoSlide(){
+/* Auto */
 
-  clearInterval(autoSlide);
+function startTopAuto(){
+
+clearInterval(topAuto);
+
+topAuto=setInterval(()=>{
+
+nextTop();
+
+},4000);
 
 }
 
 
-function restartAutoSlide(){
+function stopTopAuto(){
 
-  stopAutoSlide();
-
-  startAutoSlide();
+clearInterval(topAuto);
 
 }
 
 
-prevBtn.addEventListener("click",()=>{
+function restartTopAuto(){
 
-  previousSlide();
+stopTopAuto();
 
-  restartAutoSlide();
+startTopAuto();
+
+}
+
+
+topPrev.addEventListener("click",()=>{
+
+previousTop();
+
+restartTopAuto();
 
 });
 
 
-nextBtn.addEventListener("click",()=>{
+topNext.addEventListener("click",()=>{
 
-  nextSlide();
+nextTop();
 
-  restartAutoSlide();
+restartTopAuto();
 
 });
 
 
-gallery.addEventListener("mouseenter",stopAutoSlide);
+document.getElementById("homeSlider")
+.addEventListener("mouseenter",stopTopAuto);
 
-gallery.addEventListener("mouseleave",startAutoSlide);
-
-
-/* Start */
-
-goToSlide(0);
-
-startAutoSlide();
+document.getElementById("homeSlider")
+.addEventListener("mouseleave",startTopAuto);
 
 
+/* Touch swipe for top slider */
 
-/* =========================
-   FULL SCREEN PHOTO VIEWER
-========================= */
+let topTouchStartX=0;
 
-const modal=document.getElementById("photoModal");
-const modalImage=document.getElementById("modalImage");
-const modalCaption=document.getElementById("modalCaption");
-const modalClose=document.getElementById("modalClose");
-const modalPrev=document.getElementById("modalPrev");
-const modalNext=document.getElementById("modalNext");
+document.getElementById("homeSlider")
+.addEventListener("touchstart",(e)=>{
 
-const zoomIn=document.getElementById("zoomIn");
-const zoomOut=document.getElementById("zoomOut");
-const zoomReset=document.getElementById("zoomReset");
+topTouchStartX=e.touches[0].clientX;
 
+},{passive:true});
+
+
+document.getElementById("homeSlider")
+.addEventListener("touchend",(e)=>{
+
+const endX=e.changedTouches[0].clientX;
+
+const diff=endX-topTouchStartX;
+
+if(Math.abs(diff)<50)return;
+
+if(diff>0){
+
+previousTop();
+
+}else{
+
+nextTop();
+
+}
+
+restartTopAuto();
+
+});
+
+
+goTopSlide(0);
+startTopAuto();
+
+
+/* ==================================================
+   REMAINING PHOTOS AS SEPARATE CARDS
+================================================== */
+
+const remainingGallery=
+document.getElementById("remainingGallery");
+
+
+remainingPhotos.forEach((src,index)=>{
+
+const realIndex=index+TOP_COUNT;
+
+const card=document.createElement("div");
+
+card.className="photo-card";
+
+card.innerHTML=`
+
+<img
+src="${src}"
+alt="RR Aluminium & Glass Work Project ${realIndex+1}"
+loading="lazy"
+>
+
+<div class="photo-info">
+
+<h3>
+RR Aluminium & Glass Work – Project ${realIndex+1}
+</h3>
+
+<p>
+Aluminium, glass, doors, windows, partitions and other professional work by RR Aluminium & Glass Work.
+</p>
+
+<a
+href="javascript:void(0)"
+class="photo-view">
+View & Zoom Photo
+</a>
+
+</div>
+`;
+
+remainingGallery.appendChild(card);
+
+
+const image=card.querySelector("img");
+
+image.addEventListener("click",()=>{
+
+openPhoto(realIndex);
+
+});
+
+
+card.querySelector(".photo-view")
+.addEventListener("click",()=>{
+
+openPhoto(realIndex);
+
+});
+
+});
+
+
+/* ==================================================
+   FULL SCREEN VIEWER
+================================================== */
+
+const modal=
+document.getElementById("photoModal");
+
+const modalImage=
+document.getElementById("modalImage");
+
+const modalCaption=
+document.getElementById("modalCaption");
+
+const modalClose=
+document.getElementById("modalClose");
+
+const modalPrev=
+document.getElementById("modalPrev");
+
+const modalNext=
+document.getElementById("modalNext");
+
+const zoomIn=
+document.getElementById("zoomIn");
+
+const zoomOut=
+document.getElementById("zoomOut");
+
+const zoomReset=
+document.getElementById("zoomReset");
+
+
+let currentPhoto=0;
 let zoomLevel=1;
 
 
-/* Open photo */
+/* Open any photo */
 
 function openPhoto(index){
 
-  currentSlide=index;
+currentPhoto=
+(index+photos.length)%photos.length;
 
-  const image=slides[index].querySelector("img");
-  const caption=slides[index].querySelector("figcaption");
+modalImage.src=
+photos[currentPhoto];
 
-  modalImage.src=image.src;
-  modalImage.alt=image.alt;
+modalImage.alt=
+"RR Aluminium & Glass Work";
 
-  modalCaption.textContent=
-    caption ? caption.textContent : "";
+if(currentPhoto<TOP_COUNT){
 
-  zoomLevel=1;
+modalCaption.textContent=
+topTitles[currentPhoto];
 
-  updateZoom();
+}else{
 
-  modal.classList.add("show");
+modalCaption.textContent=
+"RR Aluminium & Glass Work – Project "+(currentPhoto+1);
 
-  document.body.style.overflow="hidden";
+}
+
+zoomLevel=1;
+
+updateZoom();
+
+modal.classList.add("show");
+
+document.body.style.overflow="hidden";
 
 }
 
 
-/* Close photo */
+/* Close */
 
 function closePhoto(){
 
-  modal.classList.remove("show");
+modal.classList.remove("show");
 
-  document.body.style.overflow="";
+document.body.style.overflow="";
 
 }
 
@@ -1580,56 +1521,41 @@ function closePhoto(){
 
 function updateZoom(){
 
-  modalImage.style.transform=
-    "scale("+zoomLevel+")";
+modalImage.style.transform=
+`scale(${zoomLevel})`;
 
 }
 
 
 zoomIn.addEventListener("click",()=>{
 
-  zoomLevel=Math.min(
-    zoomLevel+0.25,
-    4
-  );
+zoomLevel=Math.min(
+zoomLevel+.25,
+4
+);
 
-  updateZoom();
+updateZoom();
 
 });
 
 
 zoomOut.addEventListener("click",()=>{
 
-  zoomLevel=Math.max(
-    zoomLevel-0.25,
-    0.5
-  );
+zoomLevel=Math.max(
+zoomLevel-.25,
+.5
+);
 
-  updateZoom();
+updateZoom();
 
 });
 
 
 zoomReset.addEventListener("click",()=>{
 
-  zoomLevel=1;
+zoomLevel=1;
 
-  updateZoom();
-
-});
-
-
-/* Click gallery photo */
-
-slides.forEach((slide,index)=>{
-
-  const image=slide.querySelector("img");
-
-  image.addEventListener("click",()=>{
-
-    openPhoto(index);
-
-  });
+updateZoom();
 
 });
 
@@ -1638,9 +1564,7 @@ slides.forEach((slide,index)=>{
 
 modalPrev.addEventListener("click",()=>{
 
-  openPhoto(
-    (currentSlide-1+slides.length)%slides.length
-  );
+openPhoto(currentPhoto-1);
 
 });
 
@@ -1649,30 +1573,28 @@ modalPrev.addEventListener("click",()=>{
 
 modalNext.addEventListener("click",()=>{
 
-  openPhoto(
-    (currentSlide+1)%slides.length
-  );
+openPhoto(currentPhoto+1);
 
 });
 
 
-/* Close */
+/* Close button */
 
 modalClose.addEventListener(
-  "click",
-  closePhoto
+"click",
+closePhoto
 );
 
 
-/* Click black background to close */
+/* Background close */
 
 modal.addEventListener("click",(event)=>{
 
-  if(event.target===modal){
+if(event.target===modal){
 
-    closePhoto();
+closePhoto();
 
-  }
+}
 
 });
 
@@ -1681,51 +1603,47 @@ modal.addEventListener("click",(event)=>{
 
 document.addEventListener("keydown",(event)=>{
 
-  if(!modal.classList.contains("show")) return;
+if(!modal.classList.contains("show"))return;
 
-  if(event.key==="Escape"){
+if(event.key==="Escape"){
 
-    closePhoto();
+closePhoto();
 
-  }
+}
 
-  if(event.key==="ArrowLeft"){
+if(event.key==="ArrowLeft"){
 
-    openPhoto(
-      (currentSlide-1+slides.length)%slides.length
-    );
+openPhoto(currentPhoto-1);
 
-  }
+}
 
-  if(event.key==="ArrowRight"){
+if(event.key==="ArrowRight"){
 
-    openPhoto(
-      (currentSlide+1)%slides.length
-    );
+openPhoto(currentPhoto+1);
 
-  }
+}
 
-  if(event.key==="+"){
+if(event.key==="+"){
 
-    zoomLevel=Math.min(
-      zoomLevel+0.25,
-      4
-    );
+zoomLevel=Math.min(
+zoomLevel+.25,
+4
+);
 
-    updateZoom();
+updateZoom();
 
-  }
+}
 
-  if(event.key==="-"){
+if(event.key==="-"){
 
-    zoomLevel=Math.max(
-      zoomLevel-0.25,
-      0.5
-    );
+zoomLevel=Math.max(
+zoomLevel-.25,
+.5
+);
 
-    updateZoom();
+updateZoom();
 
-  }
+}
 
 });
 
@@ -1734,65 +1652,65 @@ document.addEventListener("keydown",(event)=>{
 
 modalImage.addEventListener("wheel",(event)=>{
 
-  event.preventDefault();
+event.preventDefault();
 
-  if(event.deltaY<0){
+if(event.deltaY<0){
 
-    zoomLevel=Math.min(
-      zoomLevel+0.15,
-      4
-    );
+zoomLevel=Math.min(
+zoomLevel+.15,
+4
+);
 
-  }else{
+}else{
 
-    zoomLevel=Math.max(
-      zoomLevel-0.15,
-      0.5
-    );
+zoomLevel=Math.max(
+zoomLevel-.15,
+.5
+);
 
-  }
+}
 
-  updateZoom();
+updateZoom();
 
 });
 
 
-/* Touch swipe for modal */
+/* Touch swipe fullscreen */
 
-let touchStartX=0;
+let modalTouchStartX=0;
 
 modalImage.addEventListener("touchstart",(event)=>{
 
-  touchStartX=event.touches[0].clientX;
+modalTouchStartX=
+event.touches[0].clientX;
 
-});
+},{passive:true});
 
 
 modalImage.addEventListener("touchend",(event)=>{
 
-  const touchEndX=event.changedTouches[0].clientX;
+const endX=
+event.changedTouches[0].clientX;
 
-  const difference=touchEndX-touchStartX;
+const diff=
+endX-modalTouchStartX;
 
-  if(Math.abs(difference)<50) return;
+if(Math.abs(diff)<50)return;
 
-  if(difference>0){
+if(diff>0){
 
-    openPhoto(
-      (currentSlide-1+slides.length)%slides.length
-    );
+openPhoto(currentPhoto-1);
 
-  }else{
+}else{
 
-    openPhoto(
-      (currentSlide+1)%slides.length
-    );
+openPhoto(currentPhoto+1);
 
-  }
+}
 
 });
+
 
 </script>
 
 </body>
-</html>
+  </html>
