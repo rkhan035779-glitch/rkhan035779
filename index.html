@@ -1,180 +1,330 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#082b59">
-  <meta name="description" content="RR Aluminium and Glass Work, Sector 88, Faridabad. Aluminium and UPVC windows and doors, glass cabins, toughened glass, mirrors and kitchens.">
-  <title>RR Aluminium and Glass Work | Faridabad</title>
-  <style>
-    :root{--navy:#062653;--navy2:#0a3975;--blue:#0878e8;--gold:#f6bd24;--ink:#102b50;--muted:#5d6c80;--paper:#f5f8fc}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
-    a{color:inherit;text-decoration:none} .wrap{width:min(1180px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 5px 22px #08265318}
-    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy);letter-spacing:-.6px}
-    .logo{width:55px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0b58a9 0 48%,#f4b91e 49%);display:grid;place-items:center;color:#fff;font-size:25px;font-weight:1000;font-style:italic}
-    .brand span{font-size:clamp(17px,2.5vw,25px);line-height:1.02}
-    nav{display:flex;gap:7px;align-items:center} nav a{font-weight:700;font-size:14px;padding:12px 15px;border-radius:25px}
-    nav a:hover,nav a.active{background:var(--navy2);color:#fff}
-    .menu{display:none;border:0;background:var(--navy);color:#fff;border-radius:10px;padding:10px 13px;font-size:20px}
-    .hero{background:linear-gradient(115deg,#041e42 0%,#07356e 56%,#0b65b8 100%);color:#fff;overflow:hidden;position:relative}
-    .hero:after{content:"";position:absolute;width:420px;height:420px;border:30px solid #f6bd24;border-radius:50%;right:-175px;top:-205px;opacity:.9}
-    .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:24px;min-height:440px;padding:44px 0;position:relative;z-index:1}
-    .eyebrow{color:var(--gold);font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:14px}
-    h1{font-size:clamp(34px,5vw,58px);line-height:1.04;margin:13px 0 15px;letter-spacing:-1.6px}
-    h1 em{font-style:normal;color:#ffca39}
-    .hero p{font-size:18px;line-height:1.55;color:#e6efff;max-width:520px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 23px;border-radius:40px;font-weight:900;box-shadow:0 6px 16px #0003;transition:.2s}
-    .btn:hover{transform:translateY(-2px)} .call{background:#0878ed;color:#fff;border:2px solid #b7dcff}.wa{background:#11a84d;color:#fff;border:2px solid #b8ffd1}
-    .hero-photo{height:345px;border:5px solid #fff;border-radius:24px;overflow:hidden;box-shadow:0 20px 45px #00132f88;transform:rotate(1deg)}
-    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
-    .section{padding:55px 0}.section.alt{background:var(--paper)}
-    .section-title{text-align:center;margin:0 0 10px;font-size:clamp(27px,3.6vw,38px);color:var(--navy)}
-    .section-sub{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:680px;line-height:1.6}
-    .goldline{height:4px;width:80px;background:var(--gold);border-radius:5px;margin:13px auto 25px}
-    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .service{background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #0b2a5014;border:1px solid #e6edf5;transition:.2s}
-    .service:hover{transform:translateY(-4px);box-shadow:0 14px 28px #0b2a5024}
-    .service img{width:100%;height:170px;object-fit:cover;display:block;cursor:zoom-in}
-    .service-body{padding:16px}.service h3{margin:0 0 7px;color:var(--navy);font-size:18px}.service p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
-    .gallery{background:var(--navy);color:#fff}.gallery .section-title{color:#fff}.gallery .section-sub{color:#d8e5f7}
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-    .work-card{background:#fff;color:var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 8px 20px #00152d55}
-    .work-card img{width:100%;height:210px;object-fit:cover;display:block;cursor:zoom-in;transition:transform .3s}
-    .work-card:hover img{transform:scale(1.035)}
-    .work-info{padding:13px 14px 16px}.work-info h3{margin:0 0 5px;font-size:16px;color:var(--navy)}.work-info p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
-    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:24px 0}
-    .trust-item{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px;border-right:1px solid #d4deeb;font-weight:800;color:var(--navy)}
-    .trust-item:last-child{border:0}.trust-icon{font-size:27px;color:var(--blue)}
-    .address{background:linear-gradient(110deg,#05234c,#0b4b91);color:#fff;padding:42px 0}
-    .address-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-    .address h2{color:#ffca39;margin:0 0 12px;font-size:30px}.address p{font-size:18px;line-height:1.55;margin:0 0 20px}
-    .map-link{display:inline-block;background:var(--gold);color:#172d4c;padding:12px 18px;border-radius:30px;font-weight:900}
-    .map-panel{min-height:230px;border-radius:18px;background:linear-gradient(135deg,#dce8ed,#f7f1dc);color:#173b5d;display:grid;place-items:center;text-align:center;padding:20px;border:5px solid #ffffff55}
-    footer{background:#031a38;color:#dce8f8;padding:22px 0;font-size:14px}.foot{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-    .foot-actions{display:flex;gap:18px;font-weight:800}.foot-actions a:hover{color:#ffca39}
-    .lightbox{position:fixed;inset:0;background:#020a16ed;z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
-    .lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:84vh;object-fit:contain;transition:transform .2s;cursor:zoom-in}
-    .lb-close,.lb-control{position:absolute;border:0;background:#ffffffed;color:#082653;border-radius:50%;width:44px;height:44px;font-size:24px;font-weight:900;cursor:pointer}
-    .lb-close{top:18px;right:18px}.lb-prev{left:18px;top:50%}.lb-next{right:18px;top:50%}
-    .lb-tools{position:absolute;bottom:17px;display:flex;gap:10px}.lb-tools button{border:0;border-radius:30px;padding:10px 17px;background:#fff;color:#082653;font-weight:800;cursor:pointer}
-    .lb-caption{position:absolute;bottom:70px;color:#fff;text-align:center;max-width:90%;font-size:14px}
-    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:25px}.hero-photo{height:290px}.services{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.address-grid{grid-template-columns:1fr}.trust{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:600px){.nav{min-height:68px}.menu{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:12px 4%;box-shadow:0 10px 20px #001a3830;flex-direction:column;align-items:stretch}nav.show{display:flex}nav a{text-align:center}.brand span{font-size:17px}.logo{width:45px;height:42px}.hero-grid{padding:38px 0}.hero p{font-size:16px}.hero-photo{height:230px}.section{padding:42px 0}.services{gap:11px}.service img{height:125px}.service-body{padding:12px}.service h3{font-size:15px}.service p{font-size:12px}.gallery-grid{gap:11px}.work-card img{height:145px}.work-info{padding:10px}.work-info h3{font-size:14px}.work-info p{font-size:12px}.trust-item{font-size:13px;justify-content:flex-start;padding:10px 4px}.trust-icon{font-size:22px}.address h2{font-size:26px}.address p{font-size:16px}.lb-prev{left:7px}.lb-next{right:7px}.lightbox{padding:12px}.lightbox img{max-width:96vw;max-height:78vh}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#082b59">
+<meta name="description" content="RR Aluminium and Glass Work, Sector 88 Faridabad. Aluminium and UPVC windows, doors and glass work.">
+<title>RR Aluminium and Glass Work | Faridabad</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:#18304f;background:#fff}
+a{text-decoration:none;color:inherit}
+.wrap{width:92%;max-width:1150px;margin:auto}
+
+header{position:sticky;top:0;background:#fff;z-index:20;box-shadow:0 3px 15px #0002}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;color:#062653;font-weight:900;font-size:19px}
+.logo{background:linear-gradient(135deg,#0757a8,#f6bd24);color:white;padding:12px;border-radius:12px;font-size:24px}
+nav{display:flex;gap:5px}
+nav a{padding:11px;border-radius:25px;font-size:14px;font-weight:bold}
+nav a:hover{background:#062653;color:white}
+.menu{display:none;background:#062653;color:white;border:0;padding:10px 14px;border-radius:8px;font-size:21px}
+
+.hero{background:linear-gradient(120deg,#041e42,#0754a0);color:white;padding:48px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.eyebrow{color:#f6bd24;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(34px,5vw,57px);line-height:1.1;margin:15px 0}
+h1 span{color:#ffca39}
+.hero p{font-size:18px;line-height:1.6;color:#e6efff}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-block;padding:15px 24px;border-radius:35px;color:white;font-weight:bold}
+.call{background:#0878ed}
+.wa{background:#11a84d}
+.hero-photo{height:340px;border:5px solid white;border-radius:20px;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+
+.section{padding:50px 0}
+.alt{background:#f5f8fc}
+.section-title{text-align:center;font-size:34px;color:#062653;margin:0}
+.section-sub{text-align:center;color:#68788d;line-height:1.6;margin:15px auto 30px}
+.goldline{height:4px;width:75px;background:#f6bd24;margin:15px auto 25px;border-radius:5px}
+
+.services,.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.service,.work-card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 18px #0002}
+.service img{width:100%;height:165px;object-fit:cover;display:block;cursor:pointer}
+.service-body{padding:14px}
+.service h3{color:#062653;font-size:17px;margin:0 0 8px}
+.service p{font-size:13px;line-height:1.5;color:#65758a;margin:0}
+
+.gallery{background:#062653}
+.gallery .section-title{color:white}
+.gallery .section-sub{color:#d8e5f7}
+.work-card img{width:100%;height:200px;object-fit:cover;display:block;cursor:pointer;transition:.3s}
+.work-card img:hover{transform:scale(1.04)}
+.work-info{padding:13px}
+.work-info h3{margin:0 0 5px;color:#062653;font-size:16px}
+.work-info p{margin:0;color:#65758a;font-size:13px}
+
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;font-weight:bold;color:#062653}
+.trust div{padding:20px 8px;background:#f5f8fc;border-radius:12px}
+
+.address{background:linear-gradient(110deg,#05234c,#0b4b91);color:white;padding:45px 0}
+.address-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.address h2{color:#ffca39;font-size:30px}
+.address p{font-size:18px;line-height:1.7}
+.map-link{display:inline-block;background:#f6bd24;color:#172d4c;padding:13px 20px;border-radius:30px;font-weight:bold}
+.map-panel{background:#e9f0f5;color:#173b5d;padding:35px;text-align:center;border-radius:18px;line-height:1.8}
+
+footer{background:#031a38;color:white;padding:25px 0;text-align:center}
+.foot-actions{display:flex;justify-content:center;gap:25px;margin-top:15px;font-weight:bold}
+
+.lightbox{display:none;position:fixed;inset:0;background:#000e;z-index:100;align-items:center;justify-content:center;padding:15px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95%;max-height:75vh;object-fit:contain}
+.lb-close,.lb-prev,.lb-next{position:absolute;border:0;border-radius:50%;width:44px;height:44px;font-size:25px;background:white;color:#062653}
+.lb-close{top:15px;right:15px}
+.lb-prev{left:10px;top:50%}
+.lb-next{right:10px;top:50%}
+.lb-tools{position:absolute;bottom:15px;display:flex;gap:10px}
+.lb-tools button{border:0;border-radius:25px;padding:11px 17px;font-weight:bold}
+
+@media(max-width:850px){
+.hero-grid,.address-grid{grid-template-columns:1fr}
+.services,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+.trust{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+.nav{min-height:68px}
+.menu{display:block}
+nav{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:12px;flex-direction:column}
+nav.show{display:flex}
+nav a{text-align:center}
+.brand{font-size:16px}
+.hero{padding:35px 0}
+.hero-photo{height:230px}
+.hero p{font-size:16px}
+.section{padding:40px 0}
+.service img{height:125px}
+.work-card img{height:145px}
+.service-body{padding:10px}
+.service h3{font-size:14px}
+.service p{font-size:12px}
+}
+</style>
 </head>
+
 <body>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="RR Aluminium and Glass Work home"><div class="logo">RR</div><span>RR ALUMINIUM<br>AND GLASS WORK</span></a>
-    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
-    <nav id="navLinks">
-      <a class="active" href="#home">Home</a><a href="#services">My Services</a><a href="#work">Our Work</a><a href="#address">My Address</a>
-    </nav>
-  </div>
+<div class="wrap nav">
+<a class="brand" href="#home">
+<div class="logo">RR</div>
+<span>RR ALUMINIUM<br>AND GLASS WORK</span>
+</a>
+<button class="menu" id="menuBtn">☰</button>
+<nav id="navLinks">
+<a href="#home">Home</a>
+<a href="#services">My Services</a>
+<a href="#work">Our Work</a>
+<a href="#address">My Address</a>
+</nav>
+</div>
 </header>
 
 <main>
+
 <section class="hero" id="home">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">Premium quality • Professional work</div>
-      <h1>Premium Aluminium,<br><em>UPVC & Glass</em> Work</h1>
-      <p>Quality windows, doors, glass cabins and modern solutions for your home and business.</p>
-      <div class="actions">
-        <a class="btn call" href="tel:+917275333176">☎ Call Now</a>
-        <a class="btn wa" href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a>
-      </div>
-    </div>
-    <div class="hero-photo"><img src="assets/aluminium-glass-front.jpg" alt="Aluminium and glass front work completed by RR Aluminium and Glass Work"></div>
-  </div>
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">PREMIUM QUALITY • PROFESSIONAL WORK</div>
+<h1>Premium Aluminium,<br><span>UPVC & Glass</span> Work</h1>
+<p>Quality windows, doors, glass cabins and modern solutions for your home and business.</p>
+<div class="actions">
+<a class="btn call" href="tel:+917275333176">☎ Call Now</a>
+<a class="btn wa" href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a>
+</div>
+</div>
+<div class="hero-photo">
+<img src="gallery/IMG-20251014-WA0001.jpg" alt="RR Aluminium Glass Work">
+</div>
+</div>
 </section>
 
 <section class="section alt" id="services">
-  <div class="wrap">
-    <h2 class="section-title">Our Services</h2><div class="goldline"></div>
-    <p class="section-sub">A range of aluminium, UPVC and glass solutions, planned to suit your space and requirements.</p>
-    <div class="services">
-      <article class="service"><img src="assets/aluminium-glass-sliding-front.jpg" alt="Aluminium windows and doors" data-full><div class="service-body"><h3>Aluminium Windows & Doors</h3><p>Custom aluminium frames, sliding windows and durable doors for homes and commercial spaces.</p></div></article>
-      <article class="service"><img src="assets/upvc-sliding-door.jpg" alt="UPVC windows and doors" data-full><div class="service-body"><h3>UPVC Windows & Doors</h3><p>Modern UPVC sliding and opening systems with a neat, clean finish.</p></div></article>
-      <article class="service"><img src="assets/aluminium-glass-front.jpg" alt="Toughened glass work" data-full><div class="service-body"><h3>Toughened Glass Work</h3><p>Glass partitions, fronts and tailored glass installations for interiors and exteriors.</p></div></article>
-      <article class="service"><img src="assets/aluminium-sliding-door.jpg" alt="Sliding windows and doors" data-full><div class="service-body"><h3>Sliding Windows & Doors</h3><p>Smooth sliding solutions designed to make practical use of available space.</p></div></article>
-      <article class="service"><img src="assets/glass-partition-cabin.jpg" alt="Glass cabin and office partition" data-full><div class="service-body"><h3>Glass Cabins & Partitions</h3><p>Office cabins and room partitions with clean glass lines and slim framing.</p></div></article>
-      <article class="service"><img src="assets/glass-wardrobe-door.jpg" alt="Decorative glass wardrobe doors" data-full><div class="service-body"><h3>Mirrors & LED Mirrors</h3><p>Mirror work and stylish mirror solutions to complement modern interiors.</p></div></article>
-      <article class="service"><img src="assets/commercial-glass-facade.jpg" alt="Structural glazing and facade" data-full><div class="service-body"><h3>Structural Glazing</h3><p>Contemporary glass façade and glazing work for commercial buildings.</p></div></article>
-      <article class="service"><img src="assets/aluminium-cabin.jpg" alt="Aluminium kitchen and cabin work" data-full><div class="service-body"><h3>Aluminium Kitchens & Cabins</h3><p>Practical aluminium cabin and kitchen-related fabrication for your space.</p></div></article>
-    </div>
-  </div>
+<div class="wrap">
+<h2 class="section-title">Our Services</h2>
+<div class="goldline"></div>
+<p class="section-sub">Professional Aluminium, UPVC and Glass Solutions.</p>
+
+<div class="services">
+
+<article class="service">
+<img src="gallery/IMG-20251014-WA0001.jpg" alt="Aluminium Windows">
+<div class="service-body"><h3>Aluminium Windows & Doors</h3><p>Custom aluminium frames, sliding windows and durable doors.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20251014-WA0002.jpg" alt="UPVC Windows">
+<div class="service-body"><h3>UPVC Windows & Doors</h3><p>Modern UPVC sliding and opening systems.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0001.jpg" alt="Toughened Glass">
+<div class="service-body"><h3>Toughened Glass Work</h3><p>Glass partitions, fronts and installations.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0002.jpg" alt="Sliding Windows">
+<div class="service-body"><h3>Sliding Windows & Doors</h3><p>Smooth sliding solutions for homes and offices.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0012.jpg" alt="Glass Cabin">
+<div class="service-body"><h3>Glass Cabins & Partitions</h3><p>Modern office cabins and room partitions.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0014.jpg" alt="Mirror Work">
+<div class="service-body"><h3>Mirrors & LED Mirrors</h3><p>Stylish mirror work for modern interiors.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0015.jpg" alt="Structural Glazing">
+<div class="service-body"><h3>Structural Glazing</h3><p>Modern glass facade and glazing work.</p></div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0024.jpg" alt="Aluminium Kitchen">
+<div class="service-body"><h3>Aluminium Kitchens & Cabins</h3><p>Practical aluminium fabrication solutions.</p></div>
+</article>
+
+</div>
+</div>
 </section>
 
 <section class="section gallery" id="work">
-  <div class="wrap">
-    <h2 class="section-title">Our Work Gallery</h2><div class="goldline"></div>
-    <p class="section-sub">A selection of project photos shared by RR Aluminium and Glass Work. Tap any photo to view it larger and zoom in.</p>
-    <div class="gallery-grid">
-      <article class="work-card"><img src="assets/glass-partition-cabin.jpg" alt="Glass partition cabin" data-full><div class="work-info"><h3>Glass Partition Cabin</h3><p>Interior glass partition with slim dark framing.</p></div></article>
-      <article class="work-card"><img src="assets/aluminium-glass-front.jpg" alt="Aluminium glass front" data-full><div class="work-info"><h3>Aluminium Glass Front</h3><p>White aluminium framing with tinted glass panels.</p></div></article>
-      <article class="work-card"><img src="assets/glass-wardrobe-door.jpg" alt="Decorative glass door" data-full><div class="work-info"><h3>Decorative Glass Door</h3><p>Brown-finish framed glass door installation.</p></div></article>
-      <article class="work-card"><img src="assets/commercial-glass-facade.jpg" alt="Commercial building facade" data-full><div class="work-info"><h3>Commercial Facade</h3><p>Modern exterior cladding and window combination.</p></div></article>
-      <article class="work-card"><img src="assets/aluminium-glass-sliding-front.jpg" alt="Aluminium glass sliding front" data-full><div class="work-info"><h3>Aluminium Glass Front</h3><p>Large glazed frontage with dark aluminium frames.</p></div></article>
-      <article class="work-card"><img src="assets/aluminium-cabin.jpg" alt="Grey aluminium cabin" data-full><div class="work-info"><h3>Aluminium Cabin</h3><p>Custom grey aluminium and glass cabin enclosure.</p></div></article>
-      <article class="work-card"><img src="assets/aluminium-sliding-door.jpg" alt="Black aluminium sliding door" data-full><div class="work-info"><h3>Sliding Glass Door</h3><p>Wide black aluminium sliding door system.</p></div></article>
-      <article class="work-card"><img src="assets/upvc-sliding-door.jpg" alt="White UPVC sliding door" data-full><div class="work-info"><h3>UPVC Sliding Door</h3><p>White UPVC frame with glazed sliding panels.</p></div></article>
-    </div>
-  </div>
+<div class="wrap">
+<h2 class="section-title">Our Work Gallery</h2>
+<div class="goldline"></div>
+<p class="section-sub">Our completed work. Tap any photo to view it larger.</p>
+
+<div class="gallery-grid">
+
+<article class="work-card"><img src="gallery/IMG-20251014-WA0001.jpg" alt="Aluminium Work"><div class="work-info"><h3>Aluminium Work</h3><p>Professional installation</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20251014-WA0002.jpg" alt="UPVC Work"><div class="work-info"><h3>UPVC Work</h3><p>Modern windows and doors</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20260622-WA0001.jpg" alt="Glass Work"><div class="work-info"><h3>Glass Work</h3><p>Quality glass installation</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20260622-WA0002.jpg" alt="Sliding Work"><div class="work-info"><h3>Sliding Work</h3><p>Sliding windows and doors</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20260622-WA0012.jpg" alt="Glass Cabin"><div class="work-info"><h3>Glass Cabin</h3><p>Office cabin work</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20260622-WA0014.jpg" alt="Mirror Work"><div class="work-info"><h3>Mirror Work</h3><p>Interior mirror work</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20260622-WA0015.jpg" alt="Glazing Work"><div class="work-info"><h3>Glazing Work</h3><p>Modern glass work</p></div></article>
+
+<article class="work-card"><img src="gallery/IMG-20260622-WA0024.jpg" alt="Kitchen Work"><div class="work-info"><h3>Aluminium Work</h3><p>Custom fabrication</p></div></article>
+
+</div>
+</div>
 </section>
 
 <section class="section">
-  <div class="wrap trust">
-    <div class="trust-item"><span class="trust-icon">✓</span> Premium Quality Work</div>
-    <div class="trust-item"><span class="trust-icon">✥</span> Professional Service</div>
-    <div class="trust-item"><span class="trust-icon">◷</span> On-Time Completion</div>
-    <div class="trust-item"><span class="trust-icon">★</span> Fair & Affordable Prices</div>
-  </div>
+<div class="wrap trust">
+<div>✓ Premium Quality Work</div>
+<div>✥ Professional Service</div>
+<div>◷ On-Time Completion</div>
+<div>★ Fair & Affordable Prices</div>
+</div>
 </section>
 
 <section class="address" id="address">
-  <div class="wrap address-grid">
-    <div><h2>Our Address</h2><p>Sector 88, Ratan Lal Bidhuri Market,<br>Faridabad, Haryana, India</p>
-      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ratan+Lal+Bidhuri+Market+Sector+88+Faridabad+Haryana" target="_blank" rel="noopener">📍 View on Google Maps</a>
-    </div>
-    <div class="map-panel"><div><div style="font-size:42px">📍</div><strong>RR Aluminium and Glass Work</strong><br>Ratan Lal Bidhuri Market, Sector 88<br>Faridabad, Haryana</div></div>
-  </div>
+<div class="wrap address-grid">
+<div>
+<h2>Our Address</h2>
+<p>Sector 88, Ratan Lal Bidhuri Market,<br>Faridabad, Haryana, India</p>
+<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ratan+Lal+Bidhuri+Market+Sector+88+Faridabad+Haryana" target="_blank" rel="noopener">📍 View on Google Maps</a>
+</div>
+<div class="map-panel">
+📍<br>
+<strong>RR Aluminium and Glass Work</strong><br>
+Ratan Lal Bidhuri Market<br>
+Sector 88, Faridabad
+</div>
+</div>
 </section>
+
 </main>
 
-<footer><div class="wrap foot"><div><strong>RR Aluminium and Glass Work</strong> &nbsp; | &nbsp; Your trusted partner for Aluminium, UPVC and Glass Solutions</div><div class="foot-actions"><a href="tel:+917275333176">☎ Call Now</a><a href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a></div></div></footer>
-
-<div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Photo viewer">
-  <button class="lb-close" id="lbClose" aria-label="Close photo">×</button>
-  <button class="lb-control lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
-  <img id="lbImage" src="" alt="">
-  <button class="lb-control lb-next" id="lbNext" aria-label="Next photo">›</button>
-  <div class="lb-caption" id="lbCaption"></div>
-  <div class="lb-tools"><button id="zoomOut">− Zoom</button><button id="zoomReset">Reset</button><button id="zoomIn">+ Zoom</button></div>
+<footer>
+<div class="wrap">
+<strong>RR Aluminium and Glass Work</strong>
+<p>Aluminium • UPVC • Glass Solutions</p>
+<div class="foot-actions">
+<a href="tel:+917275333176">☎ Call Now</a>
+<a href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a>
 </div>
+<p>© 2026 RR Aluminium and Glass Work</p>
+</div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+<button class="lb-close" id="lbClose">×</button>
+<button class="lb-prev" id="lbPrev">‹</button>
+<img id="lbImage" src="" alt="Work photo">
+<button class="lb-next" id="lbNext">›</button>
+<div class="lb-tools">
+<button id="zoomOut">− Zoom</button>
+<button id="zoomReset">Reset</button>
+<button id="zoomIn">+ Zoom</button>
+</div>
+</div>
+
 <script>
-  const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navLinks');
-  menuBtn.addEventListener('click',()=>nav.classList.toggle('show'));
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
-  const photos=[...document.querySelectorAll('[data-full]')], box=document.getElementById('lightbox'), big=document.getElementById('lbImage'), caption=document.getElementById('lbCaption');
-  let current=0,scale=1;
-  function showPhoto(i){current=(i+photos.length)%photos.length;const p=photos[current];big.src=p.src;big.alt=p.alt;caption.textContent=p.alt;scale=1;big.style.transform='scale(1)';box.classList.add('open');document.body.style.overflow='hidden'}
-  function closePhoto(){box.classList.remove('open');document.body.style.overflow=''}
-  photos.forEach((p,i)=>p.addEventListener('click',()=>showPhoto(i)));
-  document.getElementById('lbClose').onclick=closePhoto;
-  document.getElementById('lbPrev').onclick=()=>showPhoto(current-1);
-  document.getElementById('lbNext').onclick=()=>showPhoto(current+1);
-  document.getElementById('zoomIn').onclick=()=>{scale=Math.min(3,scale+.25);big.style.transform=`scale(${scale})`};
-  document.getElementById('zoomOut').onclick=()=>{scale=Math.max(1,scale-.25);big.style.transform=`scale(${scale})`};
-  document.getElementById('zoomReset').onclick=()=>{scale=1;big.style.transform='scale(1)'};
-  box.addEventListener('click',e=>{if(e.target===box)closePhoto()});
-  document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')closePhoto();if(e.key==='ArrowRight')showPhoto(current+1);if(e.key==='ArrowLeft')showPhoto(current-1)});
-  let startDist=0;
-  big.addEventListener('touchstart',e=>{if(e.touches.length===2)startDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY)},{passive:true});
-  big.addEventListener('touchmove',e=>{if(e.touches.length===2){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);if(d>startDist+8){scale=Math.min(3,scale+.08);big.style.transform=`scale(${scale})`;startDist=d}else if(d<startDist-8){scale=Math.max(1,scale-.08);big.style.transform=`scale(${scale})`;startDist=d}}},{passive:true});
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('navLinks');
+menuBtn.onclick=()=>nav.classList.toggle('show');
+nav.querySelectorAll('a').forEach(a=>{
+a.onclick=()=>nav.classList.remove('show');
+});
+
+const photos=[...document.querySelectorAll('.service img,.work-card img')];
+const box=document.getElementById('lightbox');
+const big=document.getElementById('lbImage');
+let current=0,scale=1;
+
+function showPhoto(i){
+current=(i+photos.length)%photos.length;
+big.src=photos[current].src;
+big.alt=photos[current].alt;
+scale=1;
+big.style.transform='scale(1)';
+box.classList.add('open');
+document.body.style.overflow='hidden';
+}
+function closePhoto(){
+box.classList.remove('open');
+document.body.style.overflow='';
+}
+photos.forEach((p,i)=>p.onclick=()=>showPhoto(i));
+document.getElementById('lbClose').onclick=closePhoto;
+document.getElementById('lbPrev').onclick=()=>showPhoto(current-1);
+document.getElementById('lbNext').onclick=()=>showPhoto(current+1);
+document.getElementById('zoomIn').onclick=()=>{
+scale=Math.min(3,scale+.25);
+big.style.transform=`scale(${scale})`;
+};
+document.getElementById('zoomOut').onclick=()=>{
+scale=Math.max(1,scale-.25);
+big.style.transform=`scale(${scale})`;
+};
+document.getElementById('zoomReset').onclick=()=>{
+scale=1;
+big.style.transform='scale(1)';
+};
+box.onclick=e=>{if(e.target===box)closePhoto()};
+document.onkeydown=e=>{
+if(!box.classList.contains('open'))return;
+if(e.key==='Escape')closePhoto();
+if(e.key==='ArrowRight')showPhoto(current+1);
+if(e.key==='ArrowLeft')showPhoto(current-1);
+};
 </script>
+
 </body>
 </html>
