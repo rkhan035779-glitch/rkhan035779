@@ -202,25 +202,8 @@ nav a{text-align:center}
 <div class="goldline"></div>
 <p class="section-sub">Our completed work. Tap any photo to view it larger.</p>
 
-<div class="gallery-grid">
+<div class="gallery-grid" id="allGallery"></div>
 
-<article class="work-card"><img src="gallery/IMG-20251014-WA0001.jpg" alt="Aluminium Work"><div class="work-info"><h3>Aluminium Work</h3><p>Professional installation</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20251014-WA0002.jpg" alt="UPVC Work"><div class="work-info"><h3>UPVC Work</h3><p>Modern windows and doors</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20260622-WA0001.jpg" alt="Glass Work"><div class="work-info"><h3>Glass Work</h3><p>Quality glass installation</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20260622-WA0002.jpg" alt="Sliding Work"><div class="work-info"><h3>Sliding Work</h3><p>Sliding windows and doors</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20260622-WA0012.jpg" alt="Glass Cabin"><div class="work-info"><h3>Glass Cabin</h3><p>Office cabin work</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20260622-WA0014.jpg" alt="Mirror Work"><div class="work-info"><h3>Mirror Work</h3><p>Interior mirror work</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20260622-WA0015.jpg" alt="Glazing Work"><div class="work-info"><h3>Glazing Work</h3><p>Modern glass work</p></div></article>
-
-<article class="work-card"><img src="gallery/IMG-20260622-WA0024.jpg" alt="Kitchen Work"><div class="work-info"><h3>Aluminium Work</h3><p>Custom fabrication</p></div></article>
-
-</div>
 </div>
 </section>
 
@@ -283,6 +266,100 @@ nav.querySelectorAll('a').forEach(a=>{
 a.onclick=()=>nav.classList.remove('show');
 });
 
+/* All existing photos from public/gallery */
+const galleryFiles=[
+"IMG-20251014-WA0001.jpg",
+"IMG-20251014-WA0002.jpg",
+"IMG-20260622-WA0001.jpg",
+"IMG-20260622-WA0002.jpg",
+"IMG-20260622-WA0012.jpg",
+"IMG-20260622-WA0014.jpg",
+"IMG-20260622-WA0015.jpg",
+"IMG-20260622-WA0024.jpg",
+"IMG_20240530_191914.jpg",
+"IMG_20240606_171126.jpg",
+"IMG_20240613_144243.jpg",
+"IMG_20240616_194249.jpg",
+"IMG_20240707_161651.jpg",
+"IMG_20240707_165924.jpg",
+"IMG_20240712_191348.jpg",
+"IMG_20240715_180125.jpg",
+"IMG_20240720_204501.jpg",
+"IMG_20240815_184617.jpg",
+"IMG_20240827_182043.jpg",
+"IMG_20240829_191459.jpg",
+"IMG_20240830_114133.jpg",
+"IMG_20240830_181455.jpg",
+"IMG_20240830_200755.jpg",
+"IMG_20240830_201027.jpg",
+"IMG_20240906_212537.jpg",
+"IMG_20240910_175557.jpg",
+"IMG_20240914_154558.jpg",
+"IMG_20240918_155532.jpg",
+"IMG_20240918_155609.jpg",
+"IMG_20241009_181801.jpg",
+"IMG_20241011_160530.jpg",
+"IMG_20241019_142742.jpg",
+"IMG_20241027_174027.jpg",
+"IMG_20241029_132858.jpg",
+"IMG_20241108_182441.jpg",
+"IMG_20241114_180821.jpg",
+"IMG_20241116_180229.jpg",
+"IMG_20241117_175106.jpg",
+"IMG_20241118_191014.jpg",
+"IMG_20241205_114405.jpg",
+"IMG_20241209_181044.jpg",
+"IMG_20241210_153415.jpg",
+"IMG_20250413_155839.jpg",
+"IMG_20250610_135902.jpg",
+"IMG_20250621_120701.jpg",
+"IMG_20250621_120705.jpg",
+"IMG_20250920_112849.jpg",
+"IMG_20250920_201746.jpg",
+"IMG_20260120_133644.jpg",
+"IMG_20260325_180034.jpg",
+"photo_04.jpg",
+"photo_09.jpg",
+"photo_11.jpg",
+"photo_12.jpg",
+"photo_13.jpg",
+"photo_14.jpg",
+"photo_15.jpg",
+"project-2.jpg",
+"project-3.jpg",
+"project-5.jpg",
+"project-6.jpg",
+"project-8.jpg"
+];
+
+const gallery=document.getElementById('allGallery');
+
+galleryFiles.forEach((file,index)=>{
+const card=document.createElement('article');
+card.className='work-card';
+
+const img=document.createElement('img');
+img.src='gallery/'+file;
+img.alt='RR Aluminium and Glass Work Project '+(index+1);
+img.loading='lazy';
+
+const info=document.createElement('div');
+info.className='work-info';
+
+const heading=document.createElement('h3');
+heading.textContent='RR Aluminium & Glass Project '+(index+1);
+
+const description=document.createElement('p');
+description.textContent='Completed aluminium, UPVC and glass work. Contact us for similar custom designs.';
+
+info.appendChild(heading);
+info.appendChild(description);
+card.appendChild(img);
+card.appendChild(info);
+gallery.appendChild(card);
+});
+
+/* Lightbox and zoom for service and gallery photos */
 const photos=[...document.querySelectorAll('.service img,.work-card img')];
 const box=document.getElementById('lightbox');
 const big=document.getElementById('lbImage');
@@ -297,27 +374,35 @@ big.style.transform='scale(1)';
 box.classList.add('open');
 document.body.style.overflow='hidden';
 }
+
 function closePhoto(){
 box.classList.remove('open');
 document.body.style.overflow='';
 }
+
 photos.forEach((p,i)=>p.onclick=()=>showPhoto(i));
+
 document.getElementById('lbClose').onclick=closePhoto;
 document.getElementById('lbPrev').onclick=()=>showPhoto(current-1);
 document.getElementById('lbNext').onclick=()=>showPhoto(current+1);
+
 document.getElementById('zoomIn').onclick=()=>{
 scale=Math.min(3,scale+.25);
 big.style.transform=`scale(${scale})`;
 };
+
 document.getElementById('zoomOut').onclick=()=>{
 scale=Math.max(1,scale-.25);
 big.style.transform=`scale(${scale})`;
 };
+
 document.getElementById('zoomReset').onclick=()=>{
 scale=1;
 big.style.transform='scale(1)';
 };
+
 box.onclick=e=>{if(e.target===box)closePhoto()};
+
 document.onkeydown=e=>{
 if(!box.classList.contains('open'))return;
 if(e.key==='Escape')closePhoto();
