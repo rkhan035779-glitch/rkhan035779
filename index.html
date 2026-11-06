@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +21,9 @@
 <meta property="og:description" content="Professional Aluminium, UPVC, Toughened Glass, Windows, Doors and Glass Partitions in Faridabad.">
 <meta property="og:url" content="https://rraluminiumandglasswork.in/">
 <meta property="og:site_name" content="RR Aluminium and Glass Work">
-<meta property="og:image" content="https://rraluminiumandglasswork.in/gallery/IMG-20251014-WA0001.jpg">
+<meta property="og:image" content="https://rraluminiumandglasswork.in/gallery/IMG-20251014-WA0002.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://rraluminiumandglasswork.in/gallery/IMG-20251014-WA0001.jpg">
+<meta name="twitter:image" content="https://rraluminiumandglasswork.in/gallery/IMG-20251014-WA0002.jpg">
 
 <script type="application/ld+json">
 {
@@ -31,6 +32,7 @@
   "name": "RR Aluminium and Glass Work",
   "url": "https://rraluminiumandglasswork.in/",
   "telephone": "+917275333176",
+  "image": "https://rraluminiumandglasswork.in/gallery/IMG-20251014-WA0002.jpg",
   "description": "Aluminium fabrication, UPVC windows and doors, toughened glass, glass cabins, partitions, mirrors and glazing services in Faridabad.",
   "address": {
     "@type": "PostalAddress",
@@ -66,7 +68,15 @@ a{text-decoration:none;color:inherit}
 header{position:sticky;top:0;background:#fff;z-index:20;box-shadow:0 3px 15px #0002}
 .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;color:#062653;font-weight:900;font-size:19px}
-.logo{background:linear-gradient(135deg,#0757a8,#f6bd24);color:white;padding:12px;border-radius:12px;font-size:24px}
+.logo{
+width:52px;
+height:52px;
+object-fit:contain;
+background:#fff;
+padding:3px;
+border-radius:12px;
+flex-shrink:0;
+}
 nav{display:flex;gap:5px}
 nav a{padding:11px;border-radius:25px;font-size:14px;font-weight:bold}
 nav a:hover{background:#062653;color:white}
@@ -121,9 +131,27 @@ footer{background:#031a38;color:white;padding:25px 0;text-align:center}
 .lb-next{right:10px;top:50%}
 .lb-tools{position:absolute;bottom:15px;display:flex;gap:10px}
 .lb-tools button{border:0;border-radius:25px;padding:11px 17px;font-weight:bold}
-/* Fixed Call button: stays visible while visitors scroll */
-.floating-call{position:fixed;right:16px;bottom:18px;z-index:90;background:#0878ed;color:#fff;padding:14px 20px;border-radius:999px;font-weight:800;box-shadow:0 4px 16px #0005;display:flex;align-items:center;gap:8px}
+
+/* Single floating circular call button */
+.floating-call{
+position:fixed;
+right:16px;
+bottom:18px;
+z-index:90;
+width:60px;
+height:60px;
+background:#0878ed;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+box-shadow:0 4px 16px #0005;
+}
 .floating-call:focus-visible{outline:3px solid #f6bd24;outline-offset:3px}
+.floating-call:active{transform:scale(.94)}
+
 @media(max-width:850px){
 .hero-grid,.address-grid{grid-template-columns:1fr}
 .services,.gallery-grid{grid-template-columns:repeat(2,1fr)}
@@ -136,6 +164,7 @@ nav{display:none;position:absolute;top:68px;left:0;right:0;background:white;padd
 nav.show{display:flex}
 nav a{text-align:center}
 .brand{font-size:16px}
+.logo{width:46px;height:46px}
 .hero{padding:35px 0}
 .hero-photo{height:230px}
 .hero p{font-size:16px}
@@ -145,43 +174,124 @@ nav a{text-align:center}
 .service-body{padding:10px}
 .service h3{font-size:14px}
 .service p{font-size:12px}
-.floating-call{right:12px;bottom:12px;padding:12px 17px}
+.floating-call{
+right:12px;
+bottom:12px;
+width:56px;
+height:56px;
+font-size:25px;
+}
 }
 </style>
 </head>
 <body>
+
 <header>
 <div class="wrap nav">
-<a class="brand" href="#home"><div class="logo">RR</div><span>RR ALUMINIUM<br>AND GLASS WORK</span></a>
+<a class="brand" href="#home">
+<img class="logo" src="favicon.svg" alt="RR Logo">
+<span>RR ALUMINIUM<br>AND GLASS WORK</span>
+</a>
 <button class="menu" id="menuBtn">☰</button>
-<nav id="navLinks"><a href="#home">Home</a><a href="#services">My Services</a><a href="#work">Our Work</a><a href="#address">My Address</a></nav>
+<nav id="navLinks">
+<a href="#home">Home</a>
+<a href="#services">My Services</a>
+<a href="#work">Our Work</a>
+<a href="#address">My Address</a>
+</nav>
 </div>
 </header>
+
 <main>
 <section class="hero" id="home">
 <div class="wrap hero-grid">
-<div><div class="eyebrow">PREMIUM QUALITY • PROFESSIONAL WORK</div>
+<div>
+<div class="eyebrow">PREMIUM QUALITY • PROFESSIONAL WORK</div>
 <h1>Premium Aluminium,<br><span>UPVC & Glass</span> Work</h1>
 <p>Quality windows, doors, glass cabins and modern solutions for your home and business.</p>
-<div class="actions"><a class="btn call" href="tel:+917275333176">☎ Call Now</a><a class="btn wa" href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a></div>
+<div class="actions">
+<a class="btn call" href="tel:+917275333176">☎ Call Now</a>
+<a class="btn wa" href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a>
 </div>
-<div class="hero-photo"><img src="gallery/IMG-20251014-WA0001.jpg" alt="RR Aluminium Glass Work"></div>
+</div>
+<div class="hero-photo">
+<img src="gallery/IMG-20251014-WA0001.jpg" alt="RR Aluminium Glass Work">
+</div>
 </div>
 </section>
+
 <section class="section alt" id="services">
 <div class="wrap">
-<h2 class="section-title">Our Services</h2><div class="goldline"></div>
+<h2 class="section-title">Our Services</h2>
+<div class="goldline"></div>
 <p class="section-sub">Professional Aluminium, UPVC and Glass Solutions in Faridabad.</p>
+
 <div class="services">
-<article class="service"><img src="gallery/IMG-20251014-WA0001.jpg" alt="Aluminium Windows and Doors in Faridabad"><div class="service-body"><h3>Aluminium Windows & Doors</h3><p>Custom aluminium frames, sliding windows and durable doors in Faridabad.</p></div></article>
-<article class="service"><img src="gallery/IMG-20251014-WA0002.jpg" alt="UPVC Windows in Faridabad"><div class="service-body"><h3>UPVC Windows & Doors</h3><p>Modern UPVC sliding and opening systems for homes and offices.</p></div></article>
-<article class="service"><img src="gallery/IMG-20260622-WA0001.jpg" alt="Toughened Glass Work Faridabad"><div class="service-body"><h3>Toughened Glass Work</h3><p>Glass partitions, fronts and professional installations.</p></div></article>
-<article class="service"><img src="gallery/IMG-20260622-WA0002.jpg" alt="Aluminium Sliding Windows"><div class="service-body"><h3>Sliding Windows & Doors</h3><p>Smooth sliding solutions for homes and offices.</p></div></article>
-<article class="service"><img src="gallery/IMG-20260622-WA0012.jpg" alt="Glass Cabins and Partitions"><div class="service-body"><h3>Glass Cabins & Partitions</h3><p>Modern office cabins and room partitions.</p></div></article>
-<article class="service"><img src="gallery/IMG-20260622-WA0014.jpg" alt="LED Mirrors and Mirror Work"><div class="service-body"><h3>Mirrors & LED Mirrors</h3><p>Stylish mirror work for modern interiors.</p></div></article>
-<article class="service"><img src="gallery/IMG-20260622-WA0015.jpg" alt="Structural Glazing"><div class="service-body"><h3>Structural Glazing</h3><p>Modern glass facade and glazing work.</p></div></article>
-<article class="service"><img src="gallery/IMG-20260622-WA0024.jpg" alt="Aluminium Kitchen and Cabins"><div class="service-body"><h3>Aluminium Kitchens & Cabins</h3><p>Practical aluminium fabrication solutions.</p></div></article>
+<article class="service">
+<img src="gallery/IMG-20251014-WA0001.jpg" alt="Aluminium Windows and Doors in Faridabad">
+<div class="service-body">
+<h3>Aluminium Windows & Doors</h3>
+<p>Custom aluminium frames, sliding windows and durable doors in Faridabad.</p>
 </div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20251014-WA0002.jpg" alt="UPVC Sliding Windows in Faridabad">
+<div class="service-body">
+<h3>UPVC Windows & Doors</h3>
+<p>Modern UPVC sliding and opening systems for homes and offices.</p>
+</div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0001.jpg" alt="Toughened Glass Work Faridabad">
+<div class="service-body">
+<h3>Toughened Glass Work</h3>
+<p>Glass partitions, fronts and professional installations.</p>
+</div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0002.jpg" alt="Aluminium Sliding Windows">
+<div class="service-body">
+<h3>Sliding Windows & Doors</h3>
+<p>Smooth sliding solutions for homes and offices.</p>
+</div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0012.jpg" alt="Glass Cabins and Partitions">
+<div class="service-body">
+<h3>Glass Cabins & Partitions</h3>
+<p>Modern office cabins and room partitions.</p>
+</div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0014.jpg" alt="LED Mirrors and Mirror Work">
+<div class="service-body">
+<h3>Mirrors & LED Mirrors</h3>
+<p>Stylish mirror work for modern interiors.</p>
+</div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0015.jpg" alt="Structural Glazing">
+<div class="service-body">
+<h3>Structural Glazing</h3>
+<p>Modern glass facade and glazing work.</p>
+</div>
+</article>
+
+<article class="service">
+<img src="gallery/IMG-20260622-WA0024.jpg" alt="Aluminium Kitchen and Cabins">
+<div class="service-body">
+<h3>Aluminium Kitchens & Cabins</h3>
+<p>Practical aluminium fabrication solutions.</p>
+</div>
+</article>
+</div>
+
 <div style="background:#fff;padding:25px;margin-top:30px;border-radius:12px;line-height:1.7">
 <h2>Aluminium and Glass Work in Faridabad</h2>
 <p>RR Aluminium and Glass Work provides professional aluminium fabrication, aluminium windows, aluminium doors, UPVC windows, UPVC doors, toughened glass, glass cabins, office glass partitions, sliding windows, aluminium kitchens, LED mirrors, structural glazing and modern glass work.</p>
@@ -190,62 +300,163 @@ nav a{text-align:center}
 </div>
 </div>
 </section>
-<section class="section gallery" id="work">
-<div class="wrap"><h2 class="section-title">Our Work Gallery</h2><div class="goldline"></div>
-<p class="section-sub">Our completed work. Tap any photo to view it larger.</p><div class="gallery-grid" id="allGallery"></div></div>
-</section>
-<section class="section"><div class="wrap trust"><div>✓ Premium Quality Work</div><div>✥ Professional Service</div><div>◷ On-Time Completion</div><div>★ Fair & Affordable Prices</div></div></section>
-<section class="address" id="address"><div class="wrap address-grid">
-<div><h2>Our Address</h2><p>Sector 88, Ratan Lal Bidhuri Market,<br>Faridabad, Haryana, India</p>
-<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ratan+Lal+Bidhuri+Market+Sector+88+Faridabad+Haryana" target="_blank" rel="noopener">📍 View on Google Maps</a></div>
-<div class="map-panel">📍<br><strong>RR Aluminium and Glass Work</strong><br>Ratan Lal Bidhuri Market<br>Sector 88, Faridabad</div>
-</div></section>
-</main>
-<footer><div class="wrap"><strong>RR Aluminium and Glass Work</strong><p>Aluminium • UPVC • Glass Solutions</p>
-<div class="foot-actions"><a href="tel:+917275333176">☎ Call Now</a><a href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a></div>
-<p>© 2026 RR Aluminium and Glass Work</p></div></footer>
 
-<a class="floating-call" href="tel:+917275333176" aria-label="Call RR Aluminium and Glass Work">☎ Call Now</a>
+<section class="section gallery" id="work">
+<div class="wrap">
+<h2 class="section-title">Our Work Gallery</h2>
+<div class="goldline"></div>
+<p class="section-sub">Our completed work. Tap any photo to view it larger.</p>
+<div class="gallery-grid" id="allGallery"></div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap trust">
+<div>✓ Premium Quality Work</div>
+<div>✥ Professional Service</div>
+<div>◷ On-Time Completion</div>
+<div>★ Fair & Affordable Prices</div>
+</div>
+</section>
+
+<section class="address" id="address">
+<div class="wrap address-grid">
+<div>
+<h2>Our Address</h2>
+<p>Sector 88, Ratan Lal Bidhuri Market,<br>Faridabad, Haryana, India</p>
+<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ratan+Lal+Bidhuri+Market+Sector+88+Faridabad+Haryana" target="_blank" rel="noopener">📍 View on Google Maps</a>
+</div>
+<div class="map-panel">
+📍<br>
+<strong>RR Aluminium and Glass Work</strong><br>
+Ratan Lal Bidhuri Market<br>
+Sector 88, Faridabad
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>RR Aluminium and Glass Work</strong>
+<p>Aluminium • UPVC • Glass Solutions</p>
+<div class="foot-actions">
+<a href="tel:+917275333176">☎ Call Now</a>
+<a href="https://wa.me/917275333176" target="_blank" rel="noopener">◉ WhatsApp</a>
+</div>
+<p>© 2026 RR Aluminium and Glass Work</p>
+</div>
+</footer>
+
+<!-- One circular floating call button -->
+<a class="floating-call" href="tel:+917275333176" aria-label="Call RR Aluminium and Glass Work" title="Call Now">☎</a>
 
 <div class="lightbox" id="lightbox">
-<button class="lb-close" id="lbClose">×</button><button class="lb-prev" id="lbPrev">‹</button>
-<img id="lbImage" src="" alt="Work photo"><button class="lb-next" id="lbNext">›</button>
-<div class="lb-tools"><button id="zoomOut">− Zoom</button><button id="zoomReset">Reset</button><button id="zoomIn">+ Zoom</button></div>
+<button class="lb-close" id="lbClose">×</button>
+<button class="lb-prev" id="lbPrev">‹</button>
+<img id="lbImage" src="" alt="Work photo">
+<button class="lb-next" id="lbNext">›</button>
+<div class="lb-tools">
+<button id="zoomOut">− Zoom</button>
+<button id="zoomReset">Reset</button>
+<button id="zoomIn">+ Zoom</button>
 </div>
+</div>
+
 <script>
 const menuBtn=document.getElementById('menuBtn');
 const nav=document.getElementById('navLinks');
+
 menuBtn.onclick=()=>nav.classList.toggle('show');
-nav.querySelectorAll('a').forEach(a=>{a.onclick=()=>nav.classList.remove('show');});
+nav.querySelectorAll('a').forEach(a=>{
+a.onclick=()=>nav.classList.remove('show');
+});
 
 /* All 62 original gallery filenames retained exactly */
 const galleryFiles=[
 "IMG-20251014-WA0001.jpg","IMG-20251014-WA0002.jpg","IMG-20260622-WA0001.jpg","IMG-20260622-WA0002.jpg","IMG-20260622-WA0012.jpg","IMG-20260622-WA0014.jpg","IMG-20260622-WA0015.jpg","IMG-20260622-WA0024.jpg",
 "IMG_20240530_191914.jpg","IMG_20240606_171126.jpg","IMG_20240613_144243.jpg","IMG_20240616_194249.jpg","IMG_20240707_161651.jpg","IMG_20240707_165924.jpg","IMG_20240712_191348.jpg","IMG_20240715_180125.jpg","IMG_20240720_204501.jpg","IMG_20240815_184617.jpg","IMG_20240827_182043.jpg","IMG_20240829_191459.jpg","IMG_20240830_114133.jpg","IMG_20240830_181455.jpg","IMG_20240830_200755.jpg","IMG_20240830_201027.jpg","IMG_20240906_212537.jpg","IMG_20240910_175557.jpg","IMG_20240914_154558.jpg","IMG_20240918_155532.jpg","IMG_20240918_155609.jpg","IMG_20241009_181801.jpg","IMG_20241011_160530.jpg","IMG_20241019_142742.jpg","IMG_20241027_174027.jpg","IMG_20241029_132858.jpg","IMG_20241108_182441.jpg","IMG_20241114_180821.jpg","IMG_20241116_180229.jpg","IMG_20241117_175106.jpg","IMG_20241118_191014.jpg","IMG_20241205_114405.jpg","IMG_20241209_181044.jpg","IMG_20241210_153415.jpg","IMG_20250413_155839.jpg","IMG_20250610_135902.jpg","IMG_20250621_120701.jpg","IMG_20250621_120705.jpg","IMG_20250920_112849.jpg","IMG_20250920_201746.jpg","IMG_20260120_133644.jpg","IMG_20260325_180034.jpg","photo_04.jpg","photo_09.jpg","photo_11.jpg","photo_12.jpg","photo_13.jpg","photo_14.jpg","photo_15.jpg","project-2.jpg","project-3.jpg","project-5.jpg","project-6.jpg","project-8.jpg"
 ];
+
 const gallery=document.getElementById('allGallery');
+
 galleryFiles.forEach((file,index)=>{
- const card=document.createElement('article');card.className='work-card';
- const img=document.createElement('img');img.src='gallery/'+file;img.alt='RR Aluminium and Glass Work Project '+(index+1);img.loading='lazy';
- const info=document.createElement('div');info.className='work-info';
- const heading=document.createElement('h3');heading.textContent='RR Aluminium & Glass Project '+(index+1);
- const description=document.createElement('p');description.textContent='Completed aluminium, UPVC and glass work. Contact us for similar custom designs.';
- info.appendChild(heading);info.appendChild(description);card.appendChild(img);card.appendChild(info);gallery.appendChild(card);
+const card=document.createElement('article');
+card.className='work-card';
+
+const img=document.createElement('img');
+img.src='gallery/'+file;
+img.alt='RR Aluminium and Glass Work Project '+(index+1);
+img.loading='lazy';
+
+const info=document.createElement('div');
+info.className='work-info';
+
+const heading=document.createElement('h3');
+heading.textContent='RR Aluminium & Glass Project '+(index+1);
+
+const description=document.createElement('p');
+description.textContent='Completed aluminium, UPVC and glass work. Contact us for similar custom designs.';
+
+info.appendChild(heading);
+info.appendChild(description);
+card.appendChild(img);
+card.appendChild(info);
+gallery.appendChild(card);
 });
+
 const photos=[...document.querySelectorAll('.service img,.work-card img')];
-const box=document.getElementById('lightbox'),big=document.getElementById('lbImage');
+const box=document.getElementById('lightbox');
+const big=document.getElementById('lbImage');
+
 let current=0,scale=1;
-function showPhoto(i){current=(i+photos.length)%photos.length;big.src=photos[current].src;big.alt=photos[current].alt;scale=1;big.style.transform='scale(1)';box.classList.add('open');document.body.style.overflow='hidden';}
-function closePhoto(){box.classList.remove('open');document.body.style.overflow='';}
+
+function showPhoto(i){
+current=(i+photos.length)%photos.length;
+big.src=photos[current].src;
+big.alt=photos[current].alt;
+scale=1;
+big.style.transform='scale(1)';
+box.classList.add('open');
+document.body.style.overflow='hidden';
+}
+
+function closePhoto(){
+box.classList.remove('open');
+document.body.style.overflow='';
+}
+
 photos.forEach((p,i)=>p.onclick=()=>showPhoto(i));
+
 document.getElementById('lbClose').onclick=closePhoto;
 document.getElementById('lbPrev').onclick=()=>showPhoto(current-1);
 document.getElementById('lbNext').onclick=()=>showPhoto(current+1);
-document.getElementById('zoomIn').onclick=()=>{scale=Math.min(3,scale+.25);big.style.transform=`scale(${scale})`;};
-document.getElementById('zoomOut').onclick=()=>{scale=Math.max(1,scale-.25);big.style.transform=`scale(${scale})`;};
-document.getElementById('zoomReset').onclick=()=>{scale=1;big.style.transform='scale(1)';};
-box.onclick=e=>{if(e.target===box)closePhoto();};
-document.onkeydown=e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')closePhoto();if(e.key==='ArrowRight')showPhoto(current+1);if(e.key==='ArrowLeft')showPhoto(current-1);};
+
+document.getElementById('zoomIn').onclick=()=>{
+scale=Math.min(3,scale+.25);
+big.style.transform=`scale(${scale})`;
+};
+
+document.getElementById('zoomOut').onclick=()=>{
+scale=Math.max(1,scale-.25);
+big.style.transform=`scale(${scale})`;
+};
+
+document.getElementById('zoomReset').onclick=()=>{
+scale=1;
+big.style.transform='scale(1)';
+};
+
+box.onclick=e=>{
+if(e.target===box)closePhoto();
+};
+
+document.onkeydown=e=>{
+if(!box.classList.contains('open'))return;
+if(e.key==='Escape')closePhoto();
+if(e.key==='ArrowRight')showPhoto(current+1);
+if(e.key==='ArrowLeft')showPhoto(current-1);
+};
 </script>
 </body>
 </html>
