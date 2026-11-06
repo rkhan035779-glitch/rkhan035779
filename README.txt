@@ -1,16 +1,18 @@
-RR ALUMINIUM AND GLASS WORK WEBSITE
+RR Aluminium and Glass Work - website update
 
-Package contents:
-- index.html: complete responsive website
-- assets/: eight project photos supplied by the business
+Included:
+- index.html: your supplied page with a fixed Call Now button and favicon metadata.
+- favicon.svg: a simple RR blue-and-gold website icon.
 
-How to publish on GitHub Pages:
-1. Extract this ZIP on your computer or phone.
-2. Open your existing GitHub repository.
-3. Upload index.html and the entire assets folder to the repository root.
-4. Commit the changes.
-5. Keep GitHub Pages enabled from the main branch / root.
-6. Connect rraluminiumandglasswork.in through the repository Pages settings and the domain DNS settings at your domain provider.
+Upload:
+1. Extract this ZIP.
+2. In your GitHub repository, replace the existing index.html with this index.html.
+3. Upload favicon.svg to the repository root (same folder as index.html).
+4. Keep your existing gallery folder and all its images unchanged.
 
-The site includes Home, My Services, Our Work, My Address, Call Now, WhatsApp, Google Maps link, and a photo viewer with close, previous/next, zoom buttons and mobile pinch zoom.
-The project gallery photos are the photos supplied by the business. Service cards reuse these genuine project photos where suitable.
+Important:
+- No gallery photos are included or deleted.
+- All 62 gallery image filenames in the supplied HTML are retained.
+- The social preview image points to your existing hero image file.
+- Google controls when/if the favicon and preview image appear in search results.
+- This favicon is a simple RR text icon, not the original metallic RR logo image.
