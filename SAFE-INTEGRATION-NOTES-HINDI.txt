@@ -1,0 +1,19 @@
+सुरक्षित बदलाव के नोट्स
+
+आपके भेजे HTML में ये बातें पहले से मौजूद हैं:
+- Floating Call Button: href="tel:+917275333176"
+- Header logo: img src="favicon.svg"
+- Favicon link: href="favicon.svg"
+- Google/social preview metadata: og:image और twitter:image अभी gallery/IMG-20251014-WA0002.jpg पर हैं।
+
+इसलिए Floating Call Button के लिए नया कोड जोड़ने की जरूरत नहीं है।
+
+Google/social preview image के लिए index.html के head में इन सभी image paths को बदलना होगा:
+https://rraluminiumandglasswork.in/gallery/IMG-20251014-WA0002.jpg
+से
+https://rraluminiumandglasswork.in/assets/upvc-sliding-window-google-preview.jpg
+(og:image, twitter:image और JSON-LD image — तीनों जगह)।
+
+Header logo और favicon के लिए backup के बाद supplied favicon.svg को assets/favicon.svg में रखें और HTML में logo/favicons के paths को assets/favicon.svg करें।
+
+नई gallery photos जोड़ने के लिए existing galleryFiles array या existing sections को बिना backup/permission न बदलें। पहले अलग से एक छोटा approved code patch तैयार करें।
